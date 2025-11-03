@@ -45,8 +45,14 @@ def generate_launch_description():
     
     use_mockamap_arg = DeclareLaunchArgument('use_mockamap', default_value=use_mockamap, description='Choose map type, map_generator or mockamap')
     
-    use_dynamic = LaunchConfiguration('use_dynamic', default=True)  
+    use_dynamic = LaunchConfiguration('use_dynamic', default=True)
     use_dynamic_arg = DeclareLaunchArgument('use_dynamic', default_value=use_dynamic, description='Use Drone Simulation Considering Dynamics or Not')
+
+    use_pcl_render = LaunchConfiguration('use_pcl_render', default=True)
+    use_pcl_render_arg = DeclareLaunchArgument('use_pcl_render', default_value=use_pcl_render, description='Use PCL Render Node for Sensing Simulation')
+
+    use_odom_vis = LaunchConfiguration('use_odom_vis', default=True)
+    use_odom_vis_arg = DeclareLaunchArgument('use_odom_vis', default_value=use_odom_vis, description='Use Odometry Visualization for RViz')
 
     # Node Definitions
     random_forest_node = Node(
@@ -212,7 +218,8 @@ def generate_launch_description():
             {'robot_scale': 1.0},
             {'tf45': False},
             {'drone_id': drone_id}
-        ]
+        ],
+        condition = IfCondition(use_odom_vis)
     )
     
     camera_file = os.path.join( 
@@ -240,7 +247,8 @@ def generate_launch_description():
             ('odometry', ['drone_', drone_id, '_', odometry_topic]),
             ('pcl_render_node/cloud', ['drone_', drone_id, '_pcl_render_node/cloud']),
             ('depth', ['drone_', drone_id, '_pcl_render_node/depth'])
-        ]
+        ],
+        condition = IfCondition(use_pcl_render)
     )
 
     # Create LaunchDescription
@@ -262,6 +270,8 @@ def generate_launch_description():
     
     ld.add_action(use_mockamap_arg)
     ld.add_action(use_dynamic_arg)
+    ld.add_action(use_pcl_render_arg)
+    ld.add_action(use_odom_vis_arg)
 
     # Add Nodes
     # ld.add_action(random_forest_node)

@@ -1,0 +1,28 @@
+layer_planner_node:
+  ros__parameters:
+    # Number of drones in the swarm (10, 25, or 49)
+    num_drones: 49
+
+    # Maximum velocity (m/s) - Increased for faster planning
+    max_vel: 3.0
+
+    # Maximum acceleration (m/s^2) - Increased for faster planning
+    max_acc: 4.0
+
+    # Maximum jerk (m/s^3)
+    max_jerk: 6.0
+
+    # B-spline limit ratio
+    limit_ratio: 1.1
+
+    # Planning frequency (Hz) - Reduced to 5Hz for better performance
+    planning_rate: 5.0
+
+    # Scenario directory (leave empty for manual RViz goal setting)
+    scenario_dir: ""
+
+    # Layer configuration
+    base_height: 1.0        # Starting height for layer 0 (m)
+    layer_spacing: 2.0      # Vertical spacing between layers (m) - Reduced for compactness
+    num_layers: 49          # Total number of available layers (should match num_drones)
+    safety_clearance: 0.3   # Minimum clearance between drones in same layer (m) - Reduced for efficiency

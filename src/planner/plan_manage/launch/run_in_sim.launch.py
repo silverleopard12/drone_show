@@ -35,8 +35,14 @@ def generate_launch_description():
     odom_topic_cmd = DeclareLaunchArgument('odom_topic', default_value=odom_topic, description='Odometry topic')
     obj_num_cmd = DeclareLaunchArgument('obj_num', default_value=obj_num, description='Number of moving objects')
 
-    use_dynamic = LaunchConfiguration('use_dynamic', default=True)  
+    use_dynamic = LaunchConfiguration('use_dynamic', default=True)
     use_dynamic_cmd = DeclareLaunchArgument('use_dynamic', default_value=use_dynamic, description='Use Drone Simulation Considering Dynamics or Not')
+
+    use_pcl_render = LaunchConfiguration('use_pcl_render', default=True)
+    use_pcl_render_cmd = DeclareLaunchArgument('use_pcl_render', default_value=use_pcl_render, description='Use PCL Render Node for Sensing Simulation')
+
+    use_odom_vis = LaunchConfiguration('use_odom_vis', default=True)
+    use_odom_vis_cmd = DeclareLaunchArgument('use_odom_vis', default_value=use_odom_vis, description='Use Odometry Visualization for RViz')
 
     # Include advanced parameters
     advanced_param_include = IncludeLaunchDescription(
@@ -59,25 +65,25 @@ def generate_launch_description():
             'max_vel': str(2.0),
             'max_acc': str(3.0),
             'planning_horizon': str(7.5),
-            'use_distinctive_trajs': 'True',
+            'use_distinctive_trajs': 'False',
             'flight_type': str(2),
             'point_num': str(1),
             'point0_x': target_x,
             'point0_y': target_y,
             'point0_z': target_z,
-            
+
             'point1_x': str(0.0),
             'point1_y': str(15.0),
             'point1_z': str(1.0),
-            
+
             'point2_x': str(15.0),
             'point2_y': str(0.0),
             'point2_z': str(1.0),
-            
+
             'point3_x': str(0.0),
             'point3_y': str(-15.0),
             'point3_z': str(1.0),
-            
+
             'point4_x': str(-15.0),
             'point4_y': str(0.0),
             'point4_z': str(1.0),
@@ -99,11 +105,13 @@ def generate_launch_description():
         ]
     )
 
-    # Include simulator 
+    # Include simulator
     simulator_include = IncludeLaunchDescription(PythonLaunchDescriptionSource(
         os.path.join(get_package_share_directory('ego_planner'), 'launch', 'simulator.launch.py')),
         launch_arguments={
             'use_dynamic_cmd': use_dynamic,
+            'use_pcl_render': use_pcl_render,
+            'use_odom_vis': use_odom_vis,
             'drone_id': drone_id,
             'map_size_x_': map_size_x,
             'map_size_y_': map_size_y,
@@ -155,11 +163,13 @@ def generate_launch_description():
     ld.add_action(odom_topic_cmd)
     ld.add_action(obj_num_cmd)
     ld.add_action(use_dynamic_cmd)
+    ld.add_action(use_pcl_render_cmd)
+    ld.add_action(use_odom_vis_cmd)
 
     # Add nodes and includes
     ld.add_action(advanced_param_include)
     ld.add_action(traj_server_node)
     ld.add_action(simulator_include)
-    # ld.add_action(obj_generator_node)    
+    # ld.add_action(obj_generator_node)
 
     return ld

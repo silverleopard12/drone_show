@@ -14,6 +14,10 @@ namespace ego_planner
     have_odom_ = false;
     have_recv_pre_agent_ = false;
 
+    // Initialize mission timing
+    mission_started_ = false;
+    goal_reached_ = false;
+
     node_->declare_parameter("fsm/flight_type", -1);
     node_->declare_parameter("fsm/thresh_replan_time", -1.0);
     node_->declare_parameter("fsm/thresh_no_replan_meter", -1.0);
@@ -272,17 +276,15 @@ namespace ego_planner
     if ((int)id == planner_manager_->pp_.drone_id)
       return;
 
-    // if (abs((ros::Time::now() - msg->start_time).toSec()) > 0.25)
-    rclcpp::Clock clock(RCL_SYSTEM_TIME);  // 确保使用当前节点的时间源
-    auto msg_time = rclcpp::Time(msg->start_time, clock.get_clock_type());
-    // RCLCPP_INFO(node_->get_logger(), "Clock type: %d", rclcpp::Clock().now().get_clock_type());
-    // RCLCPP_INFO(node_->get_logger(), "Start time clock type: %d", rclcpp::Time(msg->start_time).get_clock_type());
-    // RCLCPP_INFO(node_->get_logger(), "msg_time: %d", msg_time.get_clock_type());
-    if (abs((rclcpp::Clock().now() - msg_time).seconds()) > 0.25)
+    // Use node's unified time source for accurate time synchronization
+    rclcpp::Time msg_time = rclcpp::Time(msg->start_time);
+    rclcpp::Time now = node_->now();
+
+    // Increased threshold to 2.0s to accommodate hover trajectories from drones that reached their goals
+    if (abs((now - msg_time).seconds()) > 2.0)
     {
-      // ROS_ERROR("Time difference is too large! Local - Remote Agent %d = %fs", msg->drone_id, (ros::Time::now() - msg->start_time).toSec());
-      RCLCPP_ERROR(node_->get_logger(), "Time difference is too large! Local - Remote Agent %d = %fs",
-                   msg->drone_id, (rclcpp::Clock().now() - msg_time).seconds());
+      RCLCPP_WARN(node_->get_logger(), "Time difference is large! Local - Remote Agent %d = %fs",
+                   msg->drone_id, (now - msg_time).seconds());
       return;
     }
 
@@ -447,6 +449,14 @@ namespace ego_planner
     int pre_s = int(exec_state_);
     exec_state_ = new_state;
     cout << "[" + pos_call + "]: from " + state_str[pre_s] + " to " + state_str[int(new_state)] << endl;
+
+    // Record mission start time when entering EXEC_TRAJ for the first time
+    if (new_state == EXEC_TRAJ && !mission_started_)
+    {
+      mission_start_time_ = node_->now();
+      mission_started_ = true;
+      RCLCPP_INFO(node_->get_logger(), "Mission started!");
+    }
   }
 
   std::pair<int, EGOReplanFSM::FSM_EXEC_STATE> EGOReplanFSM::timesOfConsecutiveStateCalls()
@@ -491,6 +501,17 @@ namespace ego_planner
 
     case WAIT_TARGET:
     {
+      // IMPORTANT: Keep broadcasting hover trajectory for collision avoidance
+      // This allows other drones to avoid stationary drones at their targets
+      // Update hover trajectory with current time to prevent time diff issues
+      if (planner_manager_->local_data_.start_time_.seconds() > 1e-5)
+      {
+        // Update start_time to current time to keep time diff small
+        planner_manager_->local_data_.start_time_ = node_->now();
+        planner_manager_->local_data_.traj_id_ += 1;
+        publishSwarmTrajs(false);
+      }
+
       if (!have_target_ || !have_trigger_)
         goto force_return;
       else
@@ -502,27 +523,26 @@ namespace ego_planner
 
     case SEQUENTIAL_START: // for swarm
     {
-      if (planner_manager_->pp_.drone_id <= 0 || (planner_manager_->pp_.drone_id >= 1 && have_recv_pre_agent_))
+      // Removed sequential dependency - all drones can start independently
+      // Old condition: if (planner_manager_->pp_.drone_id <= 0 || (planner_manager_->pp_.drone_id >= 1 && have_recv_pre_agent_))
+      if (have_odom_ && have_target_ && have_trigger_)
       {
-        if (have_odom_ && have_target_ && have_trigger_)
+        bool success = planFromGlobalTraj(10); // zx-todo
+        if (success)
         {
-          bool success = planFromGlobalTraj(10); // zx-todo
-          if (success)
-          {
-            changeFSMExecState(EXEC_TRAJ, "FSM");
+          changeFSMExecState(EXEC_TRAJ, "FSM");
 
-            publishSwarmTrajs(true);
-          }
-          else
-          {
-            RCLCPP_ERROR(node_->get_logger(), "Failed to generate the first trajectory!!!");
-            changeFSMExecState(SEQUENTIAL_START, "FSM");
-          }
+          publishSwarmTrajs(true);
         }
         else
         {
-          RCLCPP_ERROR(node_->get_logger(), "No odom or no target! have_odom_=%d, have_target_=%d", have_odom_, have_target_);
+          RCLCPP_ERROR(node_->get_logger(), "Failed to generate the first trajectory!!!");
+          changeFSMExecState(SEQUENTIAL_START, "FSM");
         }
+      }
+      else
+      {
+        RCLCPP_ERROR(node_->get_logger(), "No odom or no target! have_odom_=%d, have_target_=%d", have_odom_, have_target_);
       }
 
       break;
@@ -585,6 +605,24 @@ namespace ego_planner
         {
           have_target_ = false;
           have_trigger_ = false;
+
+          // Log mission completion time
+          if (mission_started_ && !goal_reached_)
+          {
+            goal_reached_ = true;
+            double mission_duration = (node_->now() - mission_start_time_).seconds();
+            RCLCPP_INFO(node_->get_logger(), " ");
+            RCLCPP_INFO(node_->get_logger(), "========================================");
+            RCLCPP_INFO(node_->get_logger(), "🎉 MISSION COMPLETED!");
+            RCLCPP_INFO(node_->get_logger(), "Total mission time: %.2f seconds", mission_duration);
+            RCLCPP_INFO(node_->get_logger(), "========================================");
+            RCLCPP_INFO(node_->get_logger(), " ");
+          }
+
+          // IMPORTANT: Keep broadcasting hover trajectory for collision avoidance
+          // Generate a hover trajectory at current position to keep broadcasting
+          callEmergencyStop(odom_pos_);
+          publishSwarmTrajs(false);
 
           if (target_type_ == TARGET_TYPE::PRESET_TARGET)
           {

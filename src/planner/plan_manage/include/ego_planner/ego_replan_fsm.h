@@ -80,6 +80,11 @@ namespace ego_planner
 
     bool flag_escape_emergency_;
 
+    /* Mission timing */
+    rclcpp::Time mission_start_time_;
+    bool mission_started_;
+    bool goal_reached_;
+
     /* ROS utils */
     rclcpp::Node::SharedPtr node_;
     rclcpp::TimerBase::SharedPtr exec_timer_, safety_timer_;

@@ -12,6 +12,8 @@ namespace ego_planner
 
   void EGOPlannerManager::initPlanModules(rclcpp::Node::SharedPtr &node, PlanningVisualization::Ptr vis)
   {
+    node_ = node;  // Store node for unified time source
+
     node->declare_parameter("manager/max_vel", -1.0);
     node->declare_parameter("manager/max_acc", -1.0);
     node->declare_parameter("manager/max_jerk", -1.0);
@@ -453,7 +455,7 @@ namespace ego_planner
     else
       return false;
 
-    auto time_now = rclcpp::Clock().now();
+    auto time_now = node_->now();  // Use node's unified time source
 
     global_data_.setGlobalTraj(gl_traj, time_now);
 
@@ -520,7 +522,7 @@ namespace ego_planner
     else
       return false;
 
-    auto time_now = rclcpp::Clock().now();
+    auto time_now = node_->now();  // Use node's unified time source
 
     global_data_.setGlobalTraj(gl_traj, time_now);
 

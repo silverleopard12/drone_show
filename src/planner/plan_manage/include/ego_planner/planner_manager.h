@@ -58,11 +58,13 @@ namespace ego_planner
     /* main planning algorithms & modules */
     PlanningVisualization::Ptr visualization_;
 
-    // ros::Publisher obj_pub_; //zx-todo 
+    // ros::Publisher obj_pub_; //zx-todo
 
     BsplineOptimizer::Ptr bspline_optimizer_;
 
     int continous_failures_count_{0};
+
+    rclcpp::Node::SharedPtr node_;
 
     void updateTrajInfo(const UniformBspline &position_traj, const rclcpp::Time time_now);
 

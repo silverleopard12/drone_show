@@ -7,8 +7,8 @@ from launch_ros.actions import Node
 def generate_launch_description():
     # LaunchConfigurations
     map_size_x = LaunchConfiguration('map_size_x_', default=42.0)
-    map_size_y = LaunchConfiguration('map_size_y_', default=30.0)
-    map_size_z = LaunchConfiguration('map_size_z_', default=5.0)
+    map_size_y = LaunchConfiguration('map_size_y_', default=60.0)
+    map_size_z = LaunchConfiguration('map_size_z_', default=40.0)
     
     odometry_topic = LaunchConfiguration('odometry_topic', default='odom')
     camera_pose_topic = LaunchConfiguration('camera_pose_topic', default='camera_pose')
@@ -20,8 +20,8 @@ def generate_launch_description():
     fx = LaunchConfiguration('fx', default=387.229248046875)
     fy = LaunchConfiguration('fy', default=387.229248046875)
     
-    max_vel = LaunchConfiguration('max_vel', default=2.0)
-    max_acc = LaunchConfiguration('max_acc', default=3.0)
+    max_vel = LaunchConfiguration('max_vel', default=3.0)
+    max_acc = LaunchConfiguration('max_acc', default=4.0)
     planning_horizon = LaunchConfiguration('planning_horizon', default=7.5)
     
     point_num = LaunchConfiguration('point_num', default=1)
@@ -98,7 +98,9 @@ def generate_launch_description():
             ('planning/data_display', ['drone_', drone_id, '_planning/data_display']),
             ('planning/broadcast_bspline_from_planner', '/broadcast_bspline'),
             ('planning/broadcast_bspline_to_planner', '/broadcast_bspline'),
-            
+
+            ('/move_base_simple/goal', ['drone_', drone_id, '/move_base_simple/goal']),
+
             ('goal_point', ['drone_', drone_id, '_plan_vis/goal_point']),
             ('global_list', ['drone_', drone_id, '_plan_vis/global_list']),
             ('init_list', ['drone_', drone_id, '_plan_vis/init_list']),
@@ -116,7 +118,7 @@ def generate_launch_description():
             {'fsm/thresh_replan_time': 1.0},
             {'fsm/thresh_no_replan_meter': 1.0},
             {'fsm/planning_horizon': planning_horizon},
-            {'fsm/planning_horizen_time': 3.0},
+            {'fsm/planning_horizen_time': 2.5},
             {'fsm/emergency_time': 1.0},
             {'fsm/realworld_experiment': False},
             {'fsm/fail_safe': True},
@@ -178,19 +180,19 @@ def generate_launch_description():
             # planner manager
             {'manager/max_vel': max_vel},
             {'manager/max_acc': max_acc},
-            {'manager/max_jerk': 4.0},
+            {'manager/max_jerk': 6.0},
             {'manager/control_points_distance': 0.4},
             {'manager/feasibility_tolerance': 0.05},
             {'manager/planning_horizon': planning_horizon},
             {'manager/use_distinctive_trajs': use_distinctive_trajs},
             {'manager/drone_id': drone_id},
-            # Trajectory optimization parameters
+            # Trajectory optimization parameters (Aggressive for 36-drone dense swarm)
             {'optimization/lambda_smooth': 1.0},
-            {'optimization/lambda_collision': 0.5},
+            {'optimization/lambda_collision': 4.0},  # Reduced from 6.0 to 4.0 - much more flexibility
             {'optimization/lambda_feasibility': 0.1},
             {'optimization/lambda_fitness': 1.0},
-            {'optimization/dist0': 0.5},
-            {'optimization/swarm_clearance': 0.5},
+            {'optimization/dist0': 0.5},  # Reduced from 0.7 to 0.5 - start avoiding at much closer distance
+            {'optimization/swarm_clearance': 1.0},  # Reduced from 1.3m to 1.0m - minimum clearance for dense swarm
             {'optimization/max_vel': max_vel},
             {'optimization/max_acc': max_acc},
 
