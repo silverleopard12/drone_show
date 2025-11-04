@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/multi_map_server/rosidl_generator_cpp/multi_map_server/msg/detail/vertical_occupancy_grid_list__struct.hpp

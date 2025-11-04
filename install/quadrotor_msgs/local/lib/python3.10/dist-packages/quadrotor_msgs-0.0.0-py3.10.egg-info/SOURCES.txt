@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/ament_cmake_python/quadrotor_msgs/quadrotor_msgs.egg-info/SOURCES.txt

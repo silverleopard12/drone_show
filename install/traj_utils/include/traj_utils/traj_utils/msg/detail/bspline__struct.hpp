@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/traj_utils/rosidl_generator_cpp/traj_utils/msg/detail/bspline__struct.hpp

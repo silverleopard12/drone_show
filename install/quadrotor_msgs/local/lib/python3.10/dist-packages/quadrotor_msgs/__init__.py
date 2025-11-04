@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_generator_py/quadrotor_msgs/__init__.py

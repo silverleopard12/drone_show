@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/launch/simulator_example.launch.py

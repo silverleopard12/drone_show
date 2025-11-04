@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/quadrotor_msgs/msg/Corrections.msg

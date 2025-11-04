@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/multi_map_server/rosidl_generator_py/multi_map_server/msg/_vertical_occupancy_grid_list_s.c

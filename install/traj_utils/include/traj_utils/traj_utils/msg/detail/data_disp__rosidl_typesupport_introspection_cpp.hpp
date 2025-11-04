@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/traj_utils/rosidl_typesupport_introspection_cpp/traj_utils/msg/detail/data_disp__rosidl_typesupport_introspection_cpp.hpp

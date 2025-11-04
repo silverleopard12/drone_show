@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt/ament_cmake_environment_hooks/local_setup.sh

@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/src/planner/traj_utils/msg/DataDisp.msg

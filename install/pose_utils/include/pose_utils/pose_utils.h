@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/pose_utils/include/pose_utils/pose_utils.h

@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_typesupport_introspection_c/quadrotor_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h

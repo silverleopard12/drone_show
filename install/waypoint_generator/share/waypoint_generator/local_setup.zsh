@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/waypoint_generator/ament_cmake_environment_hooks/local_setup.zsh

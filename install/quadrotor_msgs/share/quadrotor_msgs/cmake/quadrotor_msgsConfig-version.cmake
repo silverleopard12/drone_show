@@ -1,1 +1,0 @@
-/home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/ament_cmake_core/quadrotor_msgsConfig-version.cmake
