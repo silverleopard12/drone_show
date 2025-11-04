@@ -140,7 +140,7 @@ def generate_launch_description():
     for config in drone_configs:
         drone_launch = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                os.path.join(get_package_share_directory('ego_planner'), 'launch', 'run_in_sim_minimal.launch.py')),
+                os.path.join(get_package_share_directory('ego_planner'), 'launch', 'run_in_sim.launch.py')),
             launch_arguments={
                 'drone_id': str(config['drone_id']),
                 'init_x': str(config['init_x']),

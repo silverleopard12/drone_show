@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_generator_c/quadrotor_msgs/msg/aux_command.h

@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_generator_cpp/quadrotor_msgs/msg/detail/lqr_trajectory__type_support.hpp

@@ -1,0 +1,118 @@
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:69:69: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   69 |         const geometry_msgs::msg::PoseStamped::ConstPtr &camera_pose);
+      |                                                                     ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:69:69: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   69 |         const geometry_msgs::msg::PoseStamped::ConstPtr &camera_pose);
+      |                                                                     ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:69:69: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   69 |         const geometry_msgs::msg::PoseStamped::ConstPtr &camera_pose);
+      |                                                                     ^
+In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:73:75: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   73 |         const geometry_msgs::msg::PoseStamped::ConstSharedPtr &camera_pose);
+      |                                                                           ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:76:80: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   76 |     void rcvDepthImgCallback(const sensor_msgs::msg::Image::ConstPtr &depth_img);
+      |                                                                                ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detect_node.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:69:69: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   69 |         const geometry_msgs::msg::PoseStamped::ConstPtr &camera_pose);
+      |                                                                     ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:69:69: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   69 |         const geometry_msgs::msg::PoseStamped::ConstPtr &camera_pose);
+      |                                                                     ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:69:69: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   69 |         const geometry_msgs::msg::PoseStamped::ConstPtr &camera_pose);
+      |                                                                     ^
+In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:73:75: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   73 |         const geometry_msgs::msg::PoseStamped::ConstSharedPtr &camera_pose);
+      |                                                                           ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:76:80: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   76 |     void rcvDepthImgCallback(const sensor_msgs::msg::Image::ConstPtr &depth_img);
+      |                                                                                ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:179:93: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  179 |   void DroneDetector::rcvDepthImgCallback(const sensor_msgs::msg::Image::ConstPtr &depth_img)
+      |                                                                                             ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/include/drone_detect/drone_detector.h:26,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/drone_detect/src/drone_detector.cpp:1:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~

@@ -1,0 +1,134 @@
+[0.013s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator
+[0.072s] -- The C compiler identification is GNU 11.4.0
+[0.132s] -- The CXX compiler identification is GNU 11.4.0
+[0.139s] -- Detecting C compiler ABI info
+[0.213s] -- Detecting C compiler ABI info - done
+[0.221s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.221s] -- Detecting C compile features
+[0.221s] -- Detecting C compile features - done
+[0.224s] -- Detecting CXX compiler ABI info
+[0.316s] -- Detecting CXX compiler ABI info - done
+[0.323s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.324s] -- Detecting CXX compile features
+[0.324s] -- Detecting CXX compile features - done
+[0.326s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.506s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.583s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.613s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.659s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.664s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.673s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.685s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.702s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.749s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.753s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.773s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.781s] -- Looking for pthread.h
+[0.858s] -- Looking for pthread.h - found
+[0.858s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.934s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.935s] -- Found Threads: TRUE  
+[0.989s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.016s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.031s] -- Found quadrotor_msgs: 0.0.0 (/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/share/quadrotor_msgs/cmake)
+[1.058s] -- Found Armadillo: /usr/include (found version "10.8.2") 
+[1.068s] -- Found uav_utils: 0.0.0 (/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils/share/uav_utils/cmake)
+[1.070s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.168s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.168s] -- Configured cppcheck include dirs: /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include;/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/ode
+[1.168s] -- Configured cppcheck exclude dirs and/or files: 
+[1.170s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.174s] -- Added test 'lint_cmake' to check CMake code style
+[1.176s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.186s] -- Added test 'uncrustify' to check C / C++ code style
+[1.186s] -- Configured uncrustify additional arguments: 
+[1.188s] -- Added test 'xmllint' to check XML markup files
+[1.190s] -- Configuring done
+[1.200s] -- Generating done
+[1.204s] -- Build files have been written to: /home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator
+[1.215s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator' returned '0': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator
+[1.218s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator -- -j22 -l22
+[1.274s] [ 25%] Building CXX object CMakeFiles/quadrotor_dynamics.dir/src/dynamics/Quadrotor.cpp.o
+[3.707s] In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/dynamics/Quadrotor.cpp:1:
+[3.708s] /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/so3_quadrotor_simulator/Quadrotor.h:20:36: warning: extra ‘;’ [-Wpedantic]
+[3.708s]    20 |     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+[3.708s]       |                                    ^
+[3.708s]       |                                    -
+[4.961s] In file included from /usr/include/boost/math/tools/cxx03_warn.hpp:9,
+[4.961s]                  from /usr/include/boost/math/constants/constants.hpp:11,
+[4.961s]                  from /usr/include/boost/math/special_functions/gamma.hpp:24,
+[4.961s]                  from /usr/include/boost/math/special_functions/factorials.hpp:14,
+[4.961s]                  from /usr/include/boost/math/special_functions/binomial.hpp:14,
+[4.961s]                  from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/ode/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+[4.961s]                  from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/ode/boost/numeric/odeint.hpp:45,
+[4.961s]                  from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/dynamics/Quadrotor.cpp:2:
+[4.961s] /usr/include/boost/bind.hpp:36:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+[4.961s]    36 | BOOST_PRAGMA_MESSAGE(
+[4.961s]       | ^~~~~~~~~~~~~~~~~~~~
+[9.949s] [ 50%] Linking CXX static library libquadrotor_dynamics.a
+[10.033s] [ 50%] Built target quadrotor_dynamics
+[10.055s] [ 75%] Building CXX object CMakeFiles/so3_quadrotor_simulator.dir/src/quadrotor_simulator_so3.cpp.o
+[11.014s] In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:5:
+[11.014s] /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/so3_quadrotor_simulator/Quadrotor.h:20:36: warning: extra ‘;’ [-Wpedantic]
+[11.014s]    20 |     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+[11.014s]       |                                    ^
+[11.014s]       |                                    -
+[12.405s] /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:175:66: warning: ‘quadrotor_msgs::msg::SO3Command_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+[12.405s]   175 | cmd_callback(const quadrotor_msgs::msg::SO3Command::ConstPtr &cmd)
+[12.405s]       |                                                                  ^
+[12.405s] In file included from /home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_generator_cpp/quadrotor_msgs/msg/so3_command.hpp:7,
+[12.405s]                  from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:3:
+[12.405s] /home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_generator_cpp/quadrotor_msgs/msg/detail/so3_command__struct.hpp:171:5: note: declared here
+[12.405s]   171 |     ConstPtr;
+[12.405s]       |     ^~~~~~~~
+[12.407s] /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:198:74: warning: ‘geometry_msgs::msg::Vector3_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+[12.407s]   198 | force_disturbance_callback(const geometry_msgs::msg::Vector3::ConstPtr &f)
+[12.407s]       |                                                                          ^
+[12.407s] In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:21,
+[12.407s]                  from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__struct.hpp:20,
+[12.407s]                  from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:24,
+[12.407s]                  from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+[12.407s]                  from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:2:
+[12.408s] /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:127:5: note: declared here
+[12.408s]   127 |     ConstPtr;
+[12.408s]       |     ^~~~~~~~
+[12.409s] /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:206:75: warning: ‘geometry_msgs::msg::Vector3_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+[12.410s]   206 | moment_disturbance_callback(const geometry_msgs::msg::Vector3::ConstPtr &m)
+[12.410s]       |                                                                           ^
+[12.410s] In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:21,
+[12.410s]                  from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__struct.hpp:20,
+[12.410s]                  from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:24,
+[12.410s]                  from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+[12.410s]                  from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:2:
+[12.410s] /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:127:5: note: declared here
+[12.410s]   127 |     ConstPtr;
+[12.410s]       |     ^~~~~~~~
+[12.496s] /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp: In function ‘int main(int, char**)’:
+[12.496s] /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:304:42: warning: variable ‘state’ set but not used [-Wunused-but-set-variable]
+[12.496s]   304 |     QuadrotorSimulator::Quadrotor::State state = quad.getState();
+[12.496s]       |                                          ^~~~~
+[21.393s] [100%] Linking CXX executable so3_quadrotor_simulator
+[21.920s] [100%] Built target so3_quadrotor_simulator
+[21.933s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator' returned '0': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator -- -j22 -l22
+[21.934s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator
+[21.941s] -- Install configuration: ""
+[21.941s] -- Execute custom install script
+[21.941s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/lib/so3_quadrotor_simulator/so3_quadrotor_simulator
+[21.951s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/launch/simulator_example.launch.py
+[21.959s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/config/rviz.rviz
+[21.968s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/ament_index/resource_index/package_run_dependencies/so3_quadrotor_simulator
+[21.975s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/ament_index/resource_index/parent_prefix_path/so3_quadrotor_simulator
+[21.982s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/environment/ament_prefix_path.sh
+[21.988s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/environment/ament_prefix_path.dsv
+[21.993s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/environment/path.sh
+[22.000s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/environment/path.dsv
+[22.006s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/local_setup.bash
+[22.012s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/local_setup.sh
+[22.018s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/local_setup.zsh
+[22.025s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/local_setup.dsv
+[22.031s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/package.dsv
+[22.038s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/ament_index/resource_index/packages/so3_quadrotor_simulator
+[22.044s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/cmake/so3_quadrotor_simulatorConfig.cmake
+[22.049s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/cmake/so3_quadrotor_simulatorConfig-version.cmake
+[22.056s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator/share/so3_quadrotor_simulator/package.xml
+[22.063s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator' returned '0': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator

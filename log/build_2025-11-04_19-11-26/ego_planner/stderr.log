@@ -1,0 +1,394 @@
+** WARNING ** io features related to pcap will be disabled
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/traj_server.cpp:27:60: warning: ‘traj_utils::msg::Bspline_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   27 | void bsplineCallback(traj_utils::msg::Bspline::ConstPtr msg)
+      |                                                            ^
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/include/traj_utils/traj_utils/msg/bspline.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/traj_server.cpp:3:
+/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/include/traj_utils/traj_utils/msg/detail/bspline__struct.hpp:181:5: note: declared here
+  181 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:208:79: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  208 |                          const geometry_msgs::msg::PoseStamped::ConstPtr &pose);
+      |                                                                               ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:208:79: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  208 |                          const geometry_msgs::msg::PoseStamped::ConstPtr &pose);
+      |                                                                               ^
+In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:209:71: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  209 |   void extrinsicCallback(const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                       ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:210:117: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  210 |   void depthOdomCallback(const sensor_msgs::msg::Image::ConstPtr &img, const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                                                                     ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:210:117: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  210 |   void depthOdomCallback(const sensor_msgs::msg::Image::ConstPtr &img, const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                                                                     ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:211:72: warning: ‘sensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  211 |   void cloudCallback(const sensor_msgs::msg::PointCloud2::ConstPtr &img);
+      |                                                                        ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/point_cloud2.hpp:7,
+                 from /opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:59,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:18,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:194:5: note: declared here
+  194 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:208:79: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  208 |                          const geometry_msgs::msg::PoseStamped::ConstPtr &pose);
+      |                                                                               ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:208:79: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  208 |                          const geometry_msgs::msg::PoseStamped::ConstPtr &pose);
+      |                                                                               ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp:22,
+                 from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/path.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:209:71: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  209 |   void extrinsicCallback(const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                       ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:210:117: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  210 |   void depthOdomCallback(const sensor_msgs::msg::Image::ConstPtr &img, const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                                                                     ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:210:117: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  210 |   void depthOdomCallback(const sensor_msgs::msg::Image::ConstPtr &img, const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                                                                     ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:211:72: warning: ‘sensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  211 |   void cloudCallback(const sensor_msgs::msg::PointCloud2::ConstPtr &img);
+      |                                                                        ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/point_cloud2.hpp:7,
+                 from /opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:59,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:18,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:194:5: note: declared here
+  194 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:208:79: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  208 |                          const geometry_msgs::msg::PoseStamped::ConstPtr &pose);
+      |                                                                               ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:208:79: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  208 |                          const geometry_msgs::msg::PoseStamped::ConstPtr &pose);
+      |                                                                               ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp:22,
+                 from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/path.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:209:71: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  209 |   void extrinsicCallback(const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                       ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:210:117: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  210 |   void depthOdomCallback(const sensor_msgs::msg::Image::ConstPtr &img, const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                                                                     ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:210:117: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  210 |   void depthOdomCallback(const sensor_msgs::msg::Image::ConstPtr &img, const nav_msgs::msg::Odometry::ConstPtr &odom);
+      |                                                                                                                     ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:211:72: warning: ‘sensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  211 |   void cloudCallback(const sensor_msgs::msg::PointCloud2::ConstPtr &img);
+      |                                                                        ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/point_cloud2.hpp:7,
+                 from /opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:59,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:18,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:194:5: note: declared here
+  194 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/obj_predictor.h:126:75: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  126 |     void poseCallback(const geometry_msgs::msg::PoseStamped::ConstPtr &msg);
+      |                                                                           ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp:22,
+                 from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/path.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/obj_predictor.h:163:77: warning: ‘visualization_msgs::msg::Marker_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  163 |     void markerCallback(const visualization_msgs::msg::Marker::ConstPtr &msg);
+      |                                                                             ^
+In file included from /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:2:
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp:364:5: note: declared here
+  364 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_planner_node.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/lbfgs.hpp: In function ‘int lbfgs::line_search_morethuente(int, double*, double*, double*, double*, double*, const double*, const double*, const double*, const double*, lbfgs::callback_data_t*, const lbfgs::lbfgs_parameter_t*)’:
+/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/lbfgs.hpp:723:54: warning: unused parameter ‘gp’ [-Wunused-parameter]
+  723 |                                        const double *gp,
+      |                                        ~~~~~~~~~~~~~~^~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/obj_predictor.h:126:75: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  126 |     void poseCallback(const geometry_msgs::msg::PoseStamped::ConstPtr &msg);
+      |                                                                           ^
+In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/obj_predictor.h:163:77: warning: ‘visualization_msgs::msg::Marker_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  163 |     void markerCallback(const visualization_msgs::msg::Marker::ConstPtr &msg);
+      |                                                                             ^
+In file included from /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/grid_map.h:14,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/include/path_searching/dyn_a_star.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:5,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp:364:5: note: declared here
+  364 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/planner_manager.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/planner_manager.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/lbfgs.hpp: In function ‘int lbfgs::line_search_morethuente(int, double*, double*, double*, double*, double*, const double*, const double*, const double*, const double*, lbfgs::callback_data_t*, const lbfgs::lbfgs_parameter_t*)’:
+/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/lbfgs.hpp:723:54: warning: unused parameter ‘gp’ [-Wunused-parameter]
+  723 |                                        const double *gp,
+      |                                        ~~~~~~~~~~~~~~^~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/obj_predictor.h:126:75: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  126 |     void poseCallback(const geometry_msgs::msg::PoseStamped::ConstPtr &msg);
+      |                                                                           ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp:22,
+                 from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/path.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:8,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/include/plan_env/obj_predictor.h:163:77: warning: ‘visualization_msgs::msg::Marker_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  163 |     void markerCallback(const visualization_msgs::msg::Marker::ConstPtr &msg);
+      |                                                                             ^
+In file included from /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:13,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp:364:5: note: declared here
+  364 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/include/ego_planner/ego_replan_fsm.h:15,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/lbfgs.hpp: In function ‘int lbfgs::line_search_morethuente(int, double*, double*, double*, double*, double*, const double*, const double*, const double*, const double*, lbfgs::callback_data_t*, const lbfgs::lbfgs_parameter_t*)’:
+/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/lbfgs.hpp:723:54: warning: unused parameter ‘gp’ [-Wunused-parameter]
+  723 |                                        const double *gp,
+      |                                        ~~~~~~~~~~~~~~^~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp: In member function ‘void ego_planner::EGOReplanFSM::triggerCallback(const std::shared_ptr<const geometry_msgs::msg::PoseStamped_<std::allocator<void> > >&)’:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/src/ego_replan_fsm.cpp:232:100: warning: unused parameter ‘msg’ [-Wunused-parameter]
+  232 |   void EGOReplanFSM::triggerCallback(const std::shared_ptr<const geometry_msgs::msg::PoseStamped> &msg)
+      |                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~

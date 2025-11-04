@@ -1,0 +1,37 @@
+** WARNING ** io features related to pcap will be disabled
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp: In static member function ‘static int ego_planner::BsplineOptimizer::earlyExit(void*, const double*, const double*, double, double, double, double, int, int, int)’:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:66: warning: unused parameter ‘x’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                    ~~~~~~~~~~~~~~^
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:83: warning: unused parameter ‘g’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                                     ~~~~~~~~~~~~~~^
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:99: warning: unused parameter ‘fx’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                                                      ~~~~~~~~~~~~~^~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:116: warning: unused parameter ‘xnorm’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                                                                       ~~~~~~~~~~~~~^~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:136: warning: unused parameter ‘gnorm’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                                                                                           ~~~~~~~~~~~~~^~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:156: warning: unused parameter ‘step’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                                                                                                               ~~~~~~~~~~~~~^~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:166: warning: unused parameter ‘n’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                                                                                                                                  ~~~~^
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:173: warning: unused parameter ‘k’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                                                                                                                                         ~~~~^
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:180: warning: unused parameter ‘ls’ [-Wunused-parameter]
+  841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+      |                                                                                                                                                                                ~~~~^~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp: In member function ‘bool ego_planner::BsplineOptimizer::rebound_optimize(double&)’:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:1567:14: warning: ISO C++ forbids variable length array ‘q’ [-Wvla]
+ 1567 |       double q[variable_num_];
+      |              ^
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp: In member function ‘bool ego_planner::BsplineOptimizer::refine_optimize()’:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:1732:12: warning: ISO C++ forbids variable length array ‘q’ [-Wvla]
+ 1732 |     double q[variable_num_];
+      |            ^

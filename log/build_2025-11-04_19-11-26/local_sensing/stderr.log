@@ -1,0 +1,4 @@
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/local_sensing/src/pointcloud_render_node.cpp: In function ‘void rcvLocalPointCloudCallBack(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)’:
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/local_sensing/src/pointcloud_render_node.cpp:167:52: warning: unused parameter ‘pointcloud_map’ [-Wunused-parameter]
+  167 |     const sensor_msgs::msg::PointCloud2::SharedPtr pointcloud_map) {
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~

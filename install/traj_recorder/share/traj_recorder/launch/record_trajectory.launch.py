@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/traj_recorder/launch/record_trajectory.launch.py

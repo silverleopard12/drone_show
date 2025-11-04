@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/build/traj_utils/rosidl_generator_py/traj_utils/msg/_bspline.py

@@ -1,0 +1,81 @@
+** WARNING ** io features related to pcap will be disabled
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/obj_predictor.cpp:45:85: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   45 |   void ObjHistory::poseCallback(const geometry_msgs::msg::PoseStamped::ConstPtr &msg)
+      |                                                                                     ^
+In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/include/plan_env/obj_predictor.h:29,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/obj_predictor.cpp:24:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/obj_predictor.cpp: In member function ‘void fast_planner::ObjHistory::poseCallback(const ConstPtr&)’:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/obj_predictor.cpp:58:25: warning: comparison of integer expressions of different signedness: ‘std::__cxx11::list<Eigen::Matrix<double, 4, 1> >::size_type’ {aka ‘long unsigned int’} and ‘int’ [-Wsign-compare]
+   58 |     if (history_.size() > queue_size_)
+      |         ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/obj_predictor.cpp: At global scope:
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/obj_predictor.cpp:203:89: warning: ‘visualization_msgs::msg::Marker_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  203 |   void ObjPredictor::markerCallback(const visualization_msgs::msg::Marker::ConstPtr &msg)
+      |                                                                                         ^
+In file included from /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/include/plan_env/obj_predictor.h:33,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/obj_predictor.cpp:24:
+/opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp:364:5: note: declared here
+  364 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:759:86: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  759 |                                 const geometry_msgs::msg::PoseStamped::ConstPtr &pose)
+      |                                                                                      ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/include/plan_env/grid_map.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:759:86: warning: ‘geometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  759 |                                 const geometry_msgs::msg::PoseStamped::ConstPtr &pose)
+      |                                                                                      ^
+In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/include/plan_env/grid_map.h:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5: note: declared here
+  115 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:806:79: warning: ‘sensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  806 | void GridMap::cloudCallback(const sensor_msgs::msg::PointCloud2::ConstPtr &img)
+      |                                                                               ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/point_cloud2.hpp:7,
+                 from /opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:59,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/include/plan_env/grid_map.h:18,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/point_cloud2__struct.hpp:194:5: note: declared here
+  194 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1031:78: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+ 1031 | void GridMap::extrinsicCallback(const nav_msgs::msg::Odometry::ConstPtr &odom)
+      |                                                                              ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/include/plan_env/grid_map.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1046:78: warning: ‘sensor_msgs::msg::Image_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+ 1046 |                                 const nav_msgs::msg::Odometry::ConstPtr &odom)
+      |                                                                              ^
+In file included from /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:7,
+                 from /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:40,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/include/plan_env/grid_map.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1:
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:173:5: note: declared here
+  173 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1046:78: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+ 1046 |                                 const nav_msgs::msg::Odometry::ConstPtr &odom)
+      |                                                                              ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/include/plan_env/grid_map.h:10,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_env/src/grid_map.cpp:1:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~

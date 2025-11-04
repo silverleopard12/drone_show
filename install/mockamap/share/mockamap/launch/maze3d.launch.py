@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/mockamap/launch/maze3d.launch.py

@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/src/planner/plan_manage/launch/run_in_sim_minimal.launch.py

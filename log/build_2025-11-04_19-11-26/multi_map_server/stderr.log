@@ -1,0 +1,16 @@
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/multi_map_server/src/multi_map_visualization.cc:18:84: warning: ‘multi_map_server::msg::MultiOccupancyGrid_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   18 | void maps2d_callback(const multi_map_server::msg::MultiOccupancyGrid::ConstPtr &msg)
+      |                                                                                    ^
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/build/multi_map_server/rosidl_generator_cpp/multi_map_server/msg/multi_occupancy_grid.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/multi_map_server/src/multi_map_visualization.cc:5:
+/home/pjh/ego_swarm/ego-planner-swarm/build/multi_map_server/rosidl_generator_cpp/multi_map_server/msg/detail/multi_occupancy_grid__struct.hpp:112:5: note: declared here
+  112 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/multi_map_server/src/multi_map_visualization.cc:37:82: warning: ‘multi_map_server::msg::MultiSparseMap3D_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   37 | void maps3d_callback(const multi_map_server::msg::MultiSparseMap3D::ConstPtr &msg)
+      |                                                                                  ^
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/build/multi_map_server/rosidl_generator_cpp/multi_map_server/msg/multi_sparse_map3_d.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/multi_map_server/src/multi_map_visualization.cc:6:
+/home/pjh/ego_swarm/ego-planner-swarm/build/multi_map_server/rosidl_generator_cpp/multi_map_server/msg/detail/multi_sparse_map3_d__struct.hpp:112:5: note: declared here
+  112 |     ConstPtr;
+      |     ^~~~~~~~

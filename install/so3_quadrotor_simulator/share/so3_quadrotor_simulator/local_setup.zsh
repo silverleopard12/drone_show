@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/build/so3_quadrotor_simulator/ament_cmake_environment_hooks/local_setup.zsh

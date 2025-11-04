@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/quadrotor_msgs/msg/SO3Command.msg

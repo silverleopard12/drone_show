@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_typesupport_fastrtps_cpp/quadrotor_msgs/msg/detail/status_data__rosidl_typesupport_fastrtps_cpp.hpp

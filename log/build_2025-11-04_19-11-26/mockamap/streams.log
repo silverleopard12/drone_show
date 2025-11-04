@@ -1,0 +1,129 @@
+[0.022s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/mockamap': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/mockamap -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap
+[0.169s] -- The C compiler identification is GNU 11.4.0
+[0.260s] -- The CXX compiler identification is GNU 11.4.0
+[0.264s] -- Detecting C compiler ABI info
+[0.315s] -- Detecting C compiler ABI info - done
+[0.320s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.320s] -- Detecting C compile features
+[0.321s] -- Detecting C compile features - done
+[0.324s] -- Detecting CXX compiler ABI info
+[0.379s] -- Detecting CXX compiler ABI info - done
+[0.386s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.386s] -- Detecting CXX compile features
+[0.386s] -- Detecting CXX compile features - done
+[0.394s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.505s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.546s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.567s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.611s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.614s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.622s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.635s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.649s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.686s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.688s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.706s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.716s] -- Looking for pthread.h
+[0.778s] -- Looking for pthread.h - found
+[0.778s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.823s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.824s] -- Found Threads: TRUE  
+[0.865s] -- Found pcl_ros: 2.4.5 (/opt/ros/humble/share/pcl_ros/cmake)
+[0.921s] -- Checking for module 'eigen3'
+[0.930s] --   Found eigen3, version 3.4.0
+[0.954s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[0.954s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.974s] -- Checking for module 'flann'
+[0.982s] --   Found flann, version 1.9.1
+[1.015s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[1.015s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[1.862s] -- Checking for module 'libusb-1.0'
+[1.872s] --   Found libusb-1.0, version 1.0.25
+[1.902s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[1.902s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.952s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.117s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.124s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.131s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.297s] -- Found Qhull version 8.0.2
+[2.413s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.528s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[2.529s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[2.529s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[2.530s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[2.530s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[2.531s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[2.532s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[2.532s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[2.532s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[2.533s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[2.534s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[2.534s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[2.535s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[2.536s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[2.536s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[2.537s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[2.538s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[2.538s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[2.539s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[2.540s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[2.541s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[2.541s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[2.541s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[2.542s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[2.542s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[2.563s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.564s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.564s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.621s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.632s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[2.648s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: date_time 
+[2.650s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.770s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.771s] -- Configured cppcheck include dirs: /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/mockamap/include/mockamap
+[2.771s] -- Configured cppcheck exclude dirs and/or files: 
+[2.773s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.773s] -- Added test 'lint_cmake' to check CMake code style
+[2.774s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.775s] -- Added test 'uncrustify' to check C / C++ code style
+[2.776s] -- Configured uncrustify additional arguments: 
+[2.776s] -- Added test 'xmllint' to check XML markup files
+[2.779s] -- Configuring done
+[2.814s] -- Generating done
+[2.826s] -- Build files have been written to: /home/pjh/ego_swarm/ego-planner-swarm/build/mockamap
+[2.850s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/mockamap' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/mockamap -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap
+[2.850s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/mockamap': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pjh/ego_swarm/ego-planner-swarm/build/mockamap -- -j22 -l22
+[2.896s] [ 40%] Building CXX object CMakeFiles/mockamap_node.dir/src/maps.cpp.o
+[2.896s] [ 40%] Building CXX object CMakeFiles/mockamap_node.dir/src/ces_randommap.cpp.o
+[2.896s] [ 60%] Building CXX object CMakeFiles/mockamap_node.dir/src/mockamap.cpp.o
+[2.896s] [ 80%] Building CXX object CMakeFiles/mockamap_node.dir/src/perlinnoise.cpp.o
+[17.126s] [100%] Linking CXX executable mockamap_node
+[18.108s] [100%] Built target mockamap_node
+[18.127s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/mockamap' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/pjh/ego_swarm/ego-planner-swarm/build/mockamap -- -j22 -l22
+[18.130s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/mockamap': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pjh/ego_swarm/ego-planner-swarm/build/mockamap
+[18.147s] -- Install configuration: "Release"
+[18.148s] -- Execute custom install script
+[18.152s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/lib/mockamap/mockamap_node
+[18.167s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/launch/maze2d.launch.py
+[18.180s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/launch/maze3d.launch.py
+[18.197s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/launch/mockamap.launch.py
+[18.210s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/launch/perlin3d.launch.py
+[18.223s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/launch/post2d.launch.py
+[18.242s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/config/rviz.rviz
+[18.264s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/ament_index/resource_index/package_run_dependencies/mockamap
+[18.282s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/ament_index/resource_index/parent_prefix_path/mockamap
+[18.300s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/environment/ament_prefix_path.sh
+[18.322s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/environment/ament_prefix_path.dsv
+[18.343s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/environment/path.sh
+[18.362s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/environment/path.dsv
+[18.382s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/local_setup.bash
+[18.420s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/local_setup.sh
+[18.438s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/local_setup.zsh
+[18.454s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/local_setup.dsv
+[18.490s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/package.dsv
+[18.516s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/ament_index/resource_index/packages/mockamap
+[18.548s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/cmake/ament_cmake_export_include_directories-extras.cmake
+[18.571s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/cmake/mockamapConfig.cmake
+[18.615s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/cmake/mockamapConfig-version.cmake
+[18.649s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/mockamap/share/mockamap/package.xml
+[18.701s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/mockamap' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/pjh/ego_swarm/ego-planner-swarm/build/mockamap

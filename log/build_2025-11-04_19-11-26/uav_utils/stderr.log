@@ -1,0 +1,24 @@
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/include/uav_utils/utils.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/src/uav_utils_test.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/include/uav_utils/converters.h:16:66: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   16 |                         Eigen::Vector3d& v, Eigen::Quaterniond& q)
+      |                                                                  ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/include/uav_utils/converters.h:4,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/include/uav_utils/utils.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/src/uav_utils_test.cpp:2:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/include/uav_utils/utils.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/src/uav_utils_test.cpp:2:
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/include/uav_utils/converters.h:33:84: warning: ‘nav_msgs::msg::Odometry_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+   33 |                       Eigen::Vector3d& v, Eigen::Quaterniond& q, Eigen::Vector3d& w)
+      |                                                                                    ^
+In file included from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/include/uav_utils/converters.h:4,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/include/uav_utils/utils.h:6,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/Utils/uav_utils/src/uav_utils_test.cpp:2:
+/opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:146:5: note: declared here
+  146 |     ConstPtr;
+      |     ^~~~~~~~

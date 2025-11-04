@@ -1,0 +1,223 @@
+[0.014s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt
+[0.064s] -- The C compiler identification is GNU 11.4.0
+[0.104s] -- The CXX compiler identification is GNU 11.4.0
+[0.111s] -- Detecting C compiler ABI info
+[0.179s] -- Detecting C compiler ABI info - done
+[0.185s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.185s] -- Detecting C compile features
+[0.186s] -- Detecting C compile features - done
+[0.188s] -- Detecting CXX compiler ABI info
+[0.259s] -- Detecting CXX compiler ABI info - done
+[0.266s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.267s] -- Detecting CXX compile features
+[0.267s] -- Detecting CXX compile features - done
+[0.269s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.399s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.450s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.474s] -- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)
+[0.508s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.513s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.520s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.531s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.547s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.592s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.595s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.617s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.624s] -- Looking for pthread.h
+[0.685s] -- Looking for pthread.h - found
+[0.686s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.751s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.752s] -- Found Threads: TRUE  
+[0.789s] -- Found rclpy: 3.3.17 (/opt/ros/humble/share/rclpy/cmake)
+[0.791s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.829s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.844s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.852s] -- Found plan_env: 0.0.0 (/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/share/plan_env/cmake)
+[0.853s] -- Found traj_utils: 0.0.0 (/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/share/traj_utils/cmake)
+[0.872s] -- Found path_searching: 0.0.0 (/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/share/path_searching/cmake)
+[0.888s] -- Checking for module 'eigen3'
+[0.903s] --   Found eigen3, version 3.4.0
+[0.934s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[0.934s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.950s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+[0.962s] -- Checking for module 'flann'
+[0.976s] --   Found flann, version 1.9.1
+[1.015s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[1.015s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[1.049s] -- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  
+[1.057s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX 
+[1.170s] -- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") 
+[1.170s] -- Found MPI: TRUE (found version "3.1") found components: C 
+[1.174s] -- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") 
+[1.179s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[1.192s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37") 
+[1.200s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[1.281s] -- Found X11: /usr/include   
+[1.281s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[1.342s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[1.342s] -- Looking for gethostbyname
+[1.401s] -- Looking for gethostbyname - found
+[1.401s] -- Looking for connect
+[1.456s] -- Looking for connect - found
+[1.456s] -- Looking for remove
+[1.514s] -- Looking for remove - found
+[1.514s] -- Looking for shmat
+[1.569s] -- Looking for shmat - found
+[1.569s] -- Looking for IceConnectionNumber in ICE
+[1.625s] -- Looking for IceConnectionNumber in ICE - found
+[1.699s] -- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.4.7") 
+[1.700s] -- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  
+[1.702s] -- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.3") 
+[1.703s] -- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.2.5") 
+[1.714s] -- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") 
+[1.719s] -- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.3.0")  
+[1.723s] -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.11.1") 
+[1.728s] -- Found utf8cpp: /usr/include/utf8cpp  
+[1.797s] -- Checking for module 'libusb-1.0'
+[1.811s] --   Found libusb-1.0, version 1.0.25
+[1.846s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[1.846s] -- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") 
+[1.846s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.895s] -- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") 
+[1.895s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.895s] ** WARNING ** io features related to pcap will be disabled
+[2.028s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.035s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.040s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.168s] -- Found Qhull version 8.0.2
+[2.286s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.406s] -- looking for PCL_COMMON
+[2.407s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[2.407s] -- looking for PCL_KDTREE
+[2.408s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[2.408s] -- looking for PCL_OCTREE
+[2.408s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[2.408s] -- looking for PCL_SEARCH
+[2.409s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[2.409s] -- looking for PCL_SAMPLE_CONSENSUS
+[2.409s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[2.409s] -- looking for PCL_FILTERS
+[2.410s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[2.410s] -- looking for PCL_2D
+[2.410s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[2.410s] -- looking for PCL_GEOMETRY
+[2.410s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[2.410s] -- looking for PCL_IO
+[2.411s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[2.411s] -- looking for PCL_FEATURES
+[2.412s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[2.412s] -- looking for PCL_ML
+[2.412s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[2.413s] -- looking for PCL_SEGMENTATION
+[2.413s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[2.413s] -- looking for PCL_VISUALIZATION
+[2.414s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[2.414s] -- looking for PCL_SURFACE
+[2.414s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[2.415s] -- looking for PCL_REGISTRATION
+[2.415s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[2.415s] -- looking for PCL_KEYPOINTS
+[2.416s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[2.416s] -- looking for PCL_TRACKING
+[2.416s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[2.416s] -- looking for PCL_RECOGNITION
+[2.417s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[2.417s] -- looking for PCL_STEREO
+[2.418s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[2.418s] -- looking for PCL_APPS
+[2.418s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[2.419s] -- looking for PCL_IN_HAND_SCANNER
+[2.419s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[2.419s] -- looking for PCL_MODELER
+[2.419s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[2.419s] -- looking for PCL_POINT_CLOUD_EDITOR
+[2.419s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[2.420s] -- looking for PCL_OUTOFCORE
+[2.420s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[2.420s] -- looking for PCL_PEOPLE
+[2.421s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[2.422s] -- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL  
+[2.423s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[2.450s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.527s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.527s] -- Configured cppcheck include dirs: /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/include
+[2.527s] -- Configured cppcheck exclude dirs and/or files: 
+[2.527s] -- Added test 'lint_cmake' to check CMake code style
+[2.528s] -- Added test 'uncrustify' to check C / C++ code style
+[2.528s] -- Configured uncrustify additional arguments: 
+[2.529s] -- Added test 'xmllint' to check XML markup files
+[2.531s] -- Configuring done
+[2.550s] -- Generating done
+[2.555s] -- Build files have been written to: /home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt
+[2.567s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt' returned '0': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt
+[2.569s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt -- -j22 -l22
+[2.611s] [ 25%] Building CXX object CMakeFiles/bspline_opt.dir/src/uniform_bspline.cpp.o
+[2.612s] [ 50%] Building CXX object CMakeFiles/bspline_opt.dir/src/bspline_optimizer.cpp.o
+[2.612s] [ 75%] Building CXX object CMakeFiles/bspline_opt.dir/src/gradient_descent_optimizer.cpp.o
+[7.337s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp: In static member function ‘static int ego_planner::BsplineOptimizer::earlyExit(void*, const double*, const double*, double, double, double, double, int, int, int)’:
+[7.337s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:66: warning: unused parameter ‘x’ [-Wunused-parameter]
+[7.337s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.337s]       |                                                    ~~~~~~~~~~~~~~^
+[7.337s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:83: warning: unused parameter ‘g’ [-Wunused-parameter]
+[7.337s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.337s]       |                                                                     ~~~~~~~~~~~~~~^
+[7.337s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:99: warning: unused parameter ‘fx’ [-Wunused-parameter]
+[7.337s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.337s]       |                                                                                      ~~~~~~~~~~~~~^~
+[7.337s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:116: warning: unused parameter ‘xnorm’ [-Wunused-parameter]
+[7.337s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.337s]       |                                                                                                       ~~~~~~~~~~~~~^~~~~
+[7.338s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:136: warning: unused parameter ‘gnorm’ [-Wunused-parameter]
+[7.338s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.338s]       |                                                                                                                           ~~~~~~~~~~~~~^~~~~
+[7.338s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:156: warning: unused parameter ‘step’ [-Wunused-parameter]
+[7.338s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.338s]       |                                                                                                                                               ~~~~~~~~~~~~~^~~~
+[7.338s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:166: warning: unused parameter ‘n’ [-Wunused-parameter]
+[7.338s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.338s]       |                                                                                                                                                                  ~~~~^
+[7.338s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:173: warning: unused parameter ‘k’ [-Wunused-parameter]
+[7.338s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.338s]       |                                                                                                                                                                         ~~~~^
+[7.338s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:841:180: warning: unused parameter ‘ls’ [-Wunused-parameter]
+[7.338s]   841 |   int BsplineOptimizer::earlyExit(void *func_data, const double *x, const double *g, const double fx, const double xnorm, const double gnorm, const double step, int n, int k, int ls)
+[7.338s]       |                                                                                                                                                                                ~~~~^~
+[7.572s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp: In member function ‘bool ego_planner::BsplineOptimizer::rebound_optimize(double&)’:
+[7.572s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:1567:14: warning: ISO C++ forbids variable length array ‘q’ [-Wvla]
+[7.572s]  1567 |       double q[variable_num_];
+[7.572s]       |              ^
+[7.583s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp: In member function ‘bool ego_planner::BsplineOptimizer::refine_optimize()’:
+[7.583s] /home/pjh/ego_swarm/ego-planner-swarm/src/planner/bspline_opt/src/bspline_optimizer.cpp:1732:12: warning: ISO C++ forbids variable length array ‘q’ [-Wvla]
+[7.583s]  1732 |     double q[variable_num_];
+[7.583s]       |            ^
+[14.905s] [100%] Linking CXX static library libbspline_opt.a
+[15.086s] [100%] Built target bspline_opt
+[15.096s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt' returned '0': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt -- -j22 -l22
+[15.097s] Invoking command in '/home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt
+[15.102s] -- Install configuration: "Release"
+[15.103s] -- Execute custom install script
+[15.103s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib/libbspline_opt.a
+[15.108s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/bspline_optimizer.h
+[15.115s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/gradient_descent_optimizer.h
+[15.120s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/lbfgs.hpp
+[15.127s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/include/bspline_opt/uniform_bspline.h
+[15.131s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/environment/library_path.sh
+[15.138s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/environment/library_path.dsv
+[15.145s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/ament_index/resource_index/package_run_dependencies/bspline_opt
+[15.151s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/ament_index/resource_index/parent_prefix_path/bspline_opt
+[15.157s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/environment/ament_prefix_path.sh
+[15.162s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/environment/ament_prefix_path.dsv
+[15.167s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/environment/path.sh
+[15.173s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/environment/path.dsv
+[15.180s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/local_setup.bash
+[15.186s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/local_setup.sh
+[15.191s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/local_setup.zsh
+[15.198s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/local_setup.dsv
+[15.204s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/package.dsv
+[15.212s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/ament_index/resource_index/packages/bspline_opt
+[15.218s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.224s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/cmake/ament_cmake_export_libraries-extras.cmake
+[15.230s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/cmake/bspline_optConfig.cmake
+[15.239s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/cmake/bspline_optConfig-version.cmake
+[15.247s] -- Symlinking: /home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/share/bspline_opt/package.xml
+[15.257s] Invoked command in '/home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt' returned '0': CMAKE_PREFIX_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env:/home/pjh/ego_swarm/ego-planner-swarm/install/waypoint_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_quadrotor_simulator:/home/pjh/ego_swarm/ego-planner-swarm/install/uav_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_recorder:/home/pjh/ego_swarm/ego-planner-swarm/install/rosmsg_tcp_bridge:/home/pjh/ego_swarm/ego-planner-swarm/install/layer_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/ego_planner:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control:/home/pjh/ego_swarm/ego-planner-swarm/install/poscmd_2_odom:/home/pjh/ego_swarm/ego-planner-swarm/install/odom_visualization:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server:/home/pjh/ego_swarm/ego-planner-swarm/install/local_sensing:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils:/home/pjh/ego_swarm/ego-planner-swarm/install/mockamap:/home/pjh/ego_swarm/ego-planner-swarm/install/map_generator:/home/pjh/ego_swarm/ego-planner-swarm/install/drone_detect:/home/pjh/ego_swarm/ego-planner-swarm/install/cmake_utils:/opt/ros/humble LD_LIBRARY_PATH=/home/pjh/ego_swarm/ego-planner-swarm/install/path_searching/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/traj_utils/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/plan_env/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/bspline_opt/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/so3_control/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/multi_map_server/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/quadrotor_msgs/lib:/home/pjh/ego_swarm/ego-planner-swarm/install/pose_utils/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/pjh/ego_swarm/ego-planner-swarm/build/bspline_opt

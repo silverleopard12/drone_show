@@ -1,0 +1,55 @@
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/dynamics/Quadrotor.cpp:1:
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/so3_quadrotor_simulator/Quadrotor.h:20:36: warning: extra ‘;’ [-Wpedantic]
+   20 |     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+      |                                    ^
+      |                                    -
+In file included from /usr/include/boost/math/tools/cxx03_warn.hpp:9,
+                 from /usr/include/boost/math/constants/constants.hpp:11,
+                 from /usr/include/boost/math/special_functions/gamma.hpp:24,
+                 from /usr/include/boost/math/special_functions/factorials.hpp:14,
+                 from /usr/include/boost/math/special_functions/binomial.hpp:14,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/ode/boost/numeric/odeint/stepper/bulirsch_stoer_dense_out.hpp:30,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/ode/boost/numeric/odeint.hpp:45,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/dynamics/Quadrotor.cpp:2:
+/usr/include/boost/bind.hpp:36:1: note: ‘#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.’
+   36 | BOOST_PRAGMA_MESSAGE(
+      | ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:5:
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/include/so3_quadrotor_simulator/Quadrotor.h:20:36: warning: extra ‘;’ [-Wpedantic]
+   20 |     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+      |                                    ^
+      |                                    -
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:175:66: warning: ‘quadrotor_msgs::msg::SO3Command_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  175 | cmd_callback(const quadrotor_msgs::msg::SO3Command::ConstPtr &cmd)
+      |                                                                  ^
+In file included from /home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_generator_cpp/quadrotor_msgs/msg/so3_command.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:3:
+/home/pjh/ego_swarm/ego-planner-swarm/build/quadrotor_msgs/rosidl_generator_cpp/quadrotor_msgs/msg/detail/so3_command__struct.hpp:171:5: note: declared here
+  171 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:198:74: warning: ‘geometry_msgs::msg::Vector3_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  198 | force_disturbance_callback(const geometry_msgs::msg::Vector3::ConstPtr &f)
+      |                                                                          ^
+In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:21,
+                 from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__struct.hpp:20,
+                 from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:24,
+                 from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:2:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:127:5: note: declared here
+  127 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:206:75: warning: ‘geometry_msgs::msg::Vector3_<std::allocator<void> >::ConstPtr’ is deprecated [-Wdeprecated-declarations]
+  206 | moment_disturbance_callback(const geometry_msgs::msg::Vector3::ConstPtr &m)
+      |                                                                           ^
+In file included from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:21,
+                 from /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/twist_with_covariance__struct.hpp:20,
+                 from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/odometry__struct.hpp:24,
+                 from /opt/ros/humble/include/nav_msgs/nav_msgs/msg/odometry.hpp:7,
+                 from /home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:2:
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:127:5: note: declared here
+  127 |     ConstPtr;
+      |     ^~~~~~~~
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp: In function ‘int main(int, char**)’:
+/home/pjh/ego_swarm/ego-planner-swarm/src/uav_simulator/so3_quadrotor_simulator/src/quadrotor_simulator_so3.cpp:304:42: warning: variable ‘state’ set but not used [-Wunused-but-set-variable]
+  304 |     QuadrotorSimulator::Quadrotor::State state = quad.getState();
+      |                                          ^~~~~

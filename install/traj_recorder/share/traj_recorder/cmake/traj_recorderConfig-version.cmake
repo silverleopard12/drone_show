@@ -1,0 +1,1 @@
+/home/pjh/ego_swarm/ego-planner-swarm/build/traj_recorder/ament_cmake_core/traj_recorderConfig-version.cmake
