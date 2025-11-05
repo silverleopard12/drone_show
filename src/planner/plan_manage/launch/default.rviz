@@ -312,20 +312,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_0_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_0_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -482,20 +468,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_1_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_1_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -652,20 +624,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_2_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_2_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -822,20 +780,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_3_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_3_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -992,20 +936,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_4_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_4_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -1162,20 +1092,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_5_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_5_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -1332,20 +1248,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_6_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_6_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -1502,20 +1404,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_7_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_2_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -1672,20 +1560,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_8_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_8_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -1842,20 +1716,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_9_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_9_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -2012,20 +1872,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_10_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_10_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -2182,20 +2028,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_11_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_11_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -2352,20 +2184,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_12_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_12_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -2522,20 +2340,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_13_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_13_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -2692,20 +2496,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_14_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_14_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -2862,20 +2652,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_15_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_15_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -3032,20 +2808,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_16_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_16_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -3202,20 +2964,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_17_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_17_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -3372,20 +3120,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_18_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_18_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -3542,20 +3276,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_19_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_19_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -3712,20 +3432,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_20_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_20_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -3882,20 +3588,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_21_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_21_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -4052,20 +3744,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_22_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_22_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -4222,20 +3900,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_23_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_23_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -4392,20 +4056,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_24_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_24_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -4562,20 +4212,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_25_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_25_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -4732,20 +4368,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_26_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_26_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -4902,20 +4524,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_27_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_27_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -5072,20 +4680,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_28_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_28_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -5242,20 +4836,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_29_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_29_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -5412,20 +4992,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_30_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_30_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -5582,20 +5148,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_31_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_31_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -5752,20 +5304,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_32_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_32_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -5922,20 +5460,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_33_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_33_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -6092,20 +5616,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_34_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_34_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -6262,20 +5772,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_35_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_35_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -6432,20 +5928,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_36_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_36_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -6602,20 +6084,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_37_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_37_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -6772,20 +6240,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_38_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_38_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -6942,20 +6396,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_39_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_39_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -7112,20 +6552,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_40_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_40_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -7282,20 +6708,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_41_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_41_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -7452,20 +6864,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_42_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_42_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -7622,20 +7020,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_43_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_43_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -7792,20 +7176,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_44_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_44_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -7962,20 +7332,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_45_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_45_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -8132,20 +7488,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_46_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_46_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -8302,20 +7644,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_47_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_47_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -8472,20 +7800,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_48_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_48_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
@@ -8642,20 +7956,6 @@ Visualization Manager:
                 Reliability Policy: Reliable
                 Value: /drone_49_vis/robot
               Value: true
-            - Class: rviz_default_plugins/Image
-              Enabled: false
-              Max Value: 1
-              Median window: 5
-              Min Value: 0
-              Name: depth
-              Normalize Range: true
-              Topic:
-                Depth: 5
-                Durability Policy: Volatile
-                History Policy: Keep Last
-                Reliability Policy: Reliable
-                Value: /drone_49_pcl_render_node/depth
-              Value: false
           Enabled: true
           Name: Simulation
       Enabled: true
