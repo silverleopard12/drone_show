@@ -83,7 +83,15 @@ RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> /root/.bashrc \
 
 # Source ROS2 setup for this shell session
 SHELL ["/bin/bash", "-c"]
-RUN source /opt/ros/${ROS_DISTRO}/setup.bash
 
-# Set default command
+# Set up environment variables for ROS2
+ENV AMENT_PREFIX_PATH=/opt/ros/humble
+ENV COLCON_PREFIX_PATH=/opt/ros/humble
+ENV LD_LIBRARY_PATH=/opt/ros/humble/lib
+ENV PATH=/opt/ros/humble/bin:$PATH
+ENV PYTHONPATH=/opt/ros/humble/lib/python3.10/site-packages
+ENV ROS_DISTRO=humble
+ENV ROS_VERSION=2
+
+# Set default command with bash login shell to source .bashrc
 CMD ["/bin/bash"]
