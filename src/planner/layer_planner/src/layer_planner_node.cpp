@@ -289,8 +289,7 @@ traj_utils::msg::Bspline LayerPlannerNode::generateLayeredTrajectory(
     bspline_msg.drone_id = drone_id;
     bspline_msg.order = 3;  // Cubic B-spline
 
-    // Set start_time to current time
-    // Note: Spatial separation (3m offset + different heights) is sufficient for collision avoidance
+    // Set start_time to current time (no future time to avoid traj_server issues)
     bspline_msg.start_time = this->now();
 
     // Convert waypoints to control points
@@ -422,42 +421,43 @@ std::vector<Eigen::Vector3d> LayerPlannerNode::generateWaypoints(
         drone_id, layer_id, xy_offset.x(), xy_offset.y(),
         start.x(), start.y(), start.z(), cruise_height, goal.x(), goal.y(), goal.z());
 
-    // ====== PHASE 0: MOVE TO ASCENT ZONE ======
-    // Move horizontally to offset ascent zone to avoid other drones' paths
-    Eigen::Vector3d ascent_zone;
-    ascent_zone.x() = start.x() + xy_offset.x();
-    ascent_zone.y() = start.y() + xy_offset.y();
-    ascent_zone.z() = start.z();
+    // ====== TIME SEPARATION: HOVER AT START (Same Z-layer only) ======
+    // Drones at different init_z heights can depart simultaneously (no collision risk)
+    // Only drones at same init_z need temporal separation during spiral ascent
+    int z_layer_index = drone_id % 6;  // 0-5: position within same Z layer
+    double hover_duration = z_layer_index * 0.8;  // 0.8 seconds per position in Z layer
+    int num_hover_points = std::max(2, static_cast<int>(hover_duration / 0.5));
 
-    // Only move to ascent zone if offset is significant
-    if ((ascent_zone - start).norm() > 0.5) {
-        Eigen::Vector3d to_ascent_vec = ascent_zone - start;
-        int num_steps = std::max(1, static_cast<int>(to_ascent_vec.norm() / 2.0));
+    for (int i = 0; i < num_hover_points; ++i) {
+        waypoints.push_back(start);
+    }
 
-        for (int i = 1; i <= num_steps; ++i) {
-            double ratio = static_cast<double>(i) / num_steps;
-            waypoints.push_back(start + ratio * to_ascent_vec);
+    // ====== PHASE 0 & 1: SPIRAL ASCENT (Combined) ======
+    // Ascend in a spiral pattern: gradually move to offset position while ascending
+    // This prevents path crossing and collisions between drones at same initial height
+
+    double total_height = cruise_height - start.z();
+
+    // Only perform spiral ascent if there's significant vertical movement needed
+    if (std::abs(total_height) > 0.1) {
+        // Number of waypoints based on vertical distance (1m per step minimum)
+        int num_spiral_steps = std::max(10, static_cast<int>(std::abs(total_height) / 1.0));
+
+        for (int i = 1; i <= num_spiral_steps; ++i) {
+            double ratio = static_cast<double>(i) / num_spiral_steps;
+            Eigen::Vector3d spiral_point;
+
+            // Gradually move from start XY to offset XY while ascending
+            spiral_point.x() = start.x() + xy_offset.x() * ratio;
+            spiral_point.y() = start.y() + xy_offset.y() * ratio;
+            spiral_point.z() = start.z() + total_height * ratio;
+
+            waypoints.push_back(spiral_point);
         }
     }
 
-    // ====== PHASE 1: VERTICAL ASCENT (at offset position) ======
-    // Ascend vertically at offset position to cruise height
-    if (std::abs(cruise_height - start.z()) > 0.1) {
-        double vertical_dist = std::abs(cruise_height - start.z());
-        int num_ascent_steps = std::max(2, static_cast<int>(vertical_dist / 1.0));  // 1m per step
-
-        for (int i = 1; i <= num_ascent_steps; ++i) {
-            double z_ratio = static_cast<double>(i) / num_ascent_steps;
-            Eigen::Vector3d ascent_point;
-            ascent_point.x() = ascent_zone.x();
-            ascent_point.y() = ascent_zone.y();
-            ascent_point.z() = start.z() + z_ratio * (cruise_height - start.z());
-            waypoints.push_back(ascent_point);
-        }
-    }
-
-    // Top of ascent (at offset position)
-    Eigen::Vector3d cruise_start(ascent_zone.x(), ascent_zone.y(), cruise_height);
+    // Top of spiral (at offset position, cruise height)
+    Eigen::Vector3d cruise_start(start.x() + xy_offset.x(), start.y() + xy_offset.y(), cruise_height);
     if ((waypoints.back() - cruise_start).norm() > 0.1) {
         waypoints.push_back(cruise_start);
     }
@@ -590,8 +590,8 @@ Eigen::Vector2d LayerPlannerNode::getLayerOffset(int drone_id) {
     // Apply circular offset pattern to prevent vertical collisions
     // Each DRONE gets a UNIQUE angle to spread drones in XY plane
     // Distribute evenly across 360 degrees based on total number of drones
-    double radius = 12.0;  // 12.0m radial offset - increased to prevent adjacent drone collisions
-                           // For 36 drones: adjacent spacing = 2*R*sin(5°) ≈ 2.09m >> 1.0m threshold
+    double radius = 20.0;  // 20.0m radial offset - increased for spiral ascent collision avoidance
+                           // For 36 drones: adjacent spacing = 2*R*sin(5°) ≈ 3.49m >> 1.0m threshold
 
     // Calculate unique angle for each DRONE: 360° / num_drones
     double angle_step = 360.0 / num_drones_;  // degrees per drone

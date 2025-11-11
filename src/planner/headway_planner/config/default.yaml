@@ -1,0 +1,102 @@
+headway_planner:
+  ros__parameters:
+    # ============================================================
+    # Dynamics Parameters
+    # ============================================================
+    v_max: 10.0           # Maximum velocity (m/s)
+    a_max: 5.0            # Maximum acceleration (m/s^2)
+    j_max: 10.0           # Maximum jerk (m/s^3)
+    v_z_max: 3.0          # Maximum vertical velocity (m/s)
+    a_z_max: 2.0          # Maximum vertical acceleration (m/s^2)
+
+    # ============================================================
+    # Safety Parameters
+    # ============================================================
+    d_min: 2.0            # Minimum safe distance (m)
+    epsilon_t: 0.2        # Time buffer for uncertainties (s)
+    e_pos: 0.1            # Position uncertainty (m)
+
+    # ============================================================
+    # Planning Parameters
+    # ============================================================
+    v_des: 5.0            # Desired cruise speed (m/s)
+    alpha: 1.2            # Safety margin multiplier (>= 1.0)
+    T_max: 300.0          # Maximum mission duration (s)
+
+    # ============================================================
+    # Collision Detection
+    # ============================================================
+    d_gate: 10.0          # Collision detection threshold (m)
+    parallel_threshold: 5.0  # Parallel path threshold (degrees)
+
+    # ============================================================
+    # Altitude Slotting
+    # ============================================================
+    h_slot: 2.0           # Altitude slot height (m)
+    enable_slotting: true # Enable altitude slotting
+    slot_threshold: 1.0   # Time gap threshold for slotting (s)
+
+    # ============================================================
+    # Scheduler Configuration
+    # ============================================================
+    scheduler_type: "greedy"  # "greedy" or "milp"
+    max_iterations: 100       # Maximum iterations for greedy
+    tolerance: 0.01           # Convergence tolerance (s)
+
+    # MILP-specific (if scheduler_type == "milp")
+    milp_solver: "cbc"        # "cbc", "scip", or "gurobi"
+    milp_time_limit: 60.0     # MILP solver time limit (s)
+    use_warm_start: true      # Use greedy solution as warm start
+
+    # ============================================================
+    # PX4 Mission Generation
+    # ============================================================
+    takeoff_altitude: 5.0     # Takeoff altitude (m)
+    goal_hover_time: 2.0      # Hover time at goal (s)
+    enable_landing: false     # Enable landing at end
+    waypoint_spacing: 5.0     # Waypoint spacing for slots (m)
+
+    # ============================================================
+    # Mission Configuration
+    # ============================================================
+    mission_source: "formation"  # "formation", "yaml", or "params"
+
+    # Formation generator (if mission_source == "formation")
+    formation:
+      type: "grid"            # "grid", "circle", or "line"
+      num_drones: 10
+      grid_rows: 2
+      grid_cols: 5
+      spacing: 5.0            # Spacing between drones (m)
+      start_center: [0.0, 0.0, 5.0]
+      goal_center: [50.0, 0.0, 5.0]
+
+    # YAML file (if mission_source == "yaml")
+    mission_file: ""          # Path to mission YAML file
+
+    # ============================================================
+    # Output Configuration
+    # ============================================================
+    output_dir: "/tmp/headway_planner_output"
+    plan_file_prefix: "drone_"
+    save_summary: true
+    summary_file: "summary.txt"
+
+    # ============================================================
+    # Visualization
+    # ============================================================
+    enable_visualization: true
+    vis_topic: "/headway_planner/visualization"
+    status_topic: "/headway_planner/status"
+
+    # Visualization colors (RGBA)
+    path_color: [0.0, 1.0, 0.0, 0.8]      # Green
+    event_color: [1.0, 0.0, 0.0, 0.5]     # Red
+    slot_color: [0.0, 0.0, 1.0, 0.6]      # Blue
+
+    # ============================================================
+    # Debugging
+    # ============================================================
+    verbose: true
+    print_events: true
+    print_statistics: true

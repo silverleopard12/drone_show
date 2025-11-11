@@ -1,0 +1,104 @@
+# ORCA Planner Configuration for Drone Swarms
+
+orca_planner:
+  ros__parameters:
+    # Mission configuration
+    num_drones: 10
+    mission_type: "point_to_point"  # point_to_point, formation, waypoints
+    mission_file: ""                # Optional: load from YAML file
+    output_path: "trajectories/orca_swarm.traj"
+
+    # Time parameters
+    dt: 0.1                    # Time step (seconds)
+    total_duration: 60.0       # Total mission duration (seconds)
+
+    # ORCA algorithm parameters
+    orca:
+      time_horizon: 3.0        # Look-ahead time for collision avoidance
+      neighbor_dist: 5.0       # Maximum distance to consider neighbors
+      max_neighbors: 10        # Maximum number of neighbors to process
+      max_speed: 2.0           # Maximum agent speed (m/s)
+      preferred_speed: 1.5     # Preferred cruising speed (m/s)
+
+    # Goal reaching
+    goal_tolerance: 0.5        # Distance to consider goal reached (m)
+    hover_time: 1.0            # Time to hover at goal (seconds)
+
+    # Trajectory smoothing
+    enable_smoothing: true
+    smoothing_window: 5        # Window size for moving average
+
+    # Simple point-to-point mission
+    simple_mission:
+      # Grid formation start
+      start_formation:
+        type: "grid"
+        rows: 2
+        cols: 5
+        spacing: 1.5           # meters between drones
+        center: [0.0, 0.0, 2.0]
+        height: 2.0
+
+      # Goal positions
+      goal_formation:
+        type: "grid"
+        rows: 2
+        cols: 5
+        spacing: 1.5
+        center: [20.0, 20.0, 5.0]
+        height: 5.0
+
+    # Formation show mission (sequence of formations)
+    formation_mission:
+      formations:
+        - name: "circle"
+          start_time: 0.0
+          duration: 10.0
+          transition_time: 5.0
+          shape: "circle"
+          params:
+            radius: 8.0
+            center: [10.0, 10.0, 5.0]
+            height: 5.0
+
+        - name: "line"
+          start_time: 15.0
+          duration: 8.0
+          transition_time: 4.0
+          shape: "line"
+          params:
+            start: [5.0, 10.0, 5.0]
+            end: [15.0, 10.0, 5.0]
+            spacing: 1.2
+
+        - name: "heart"
+          start_time: 27.0
+          duration: 12.0
+          transition_time: 6.0
+          shape: "heart"
+          params:
+            scale: 10.0
+            center: [10.0, 10.0, 6.0]
+            rotation: 0.0
+
+    # Visualization settings
+    visualization:
+      enabled: true
+      frame_id: "world"
+      publish_rate: 10.0       # Hz
+      show_trajectories: true
+      show_agents: true
+      show_formations: true
+      trajectory_color_mode: "drone_id"  # drone_id, velocity, time
+
+    # Performance
+    use_spatial_hash: true     # Use spatial hashing for neighbor search
+    use_openmp: true           # Use OpenMP for parallelization
+    num_threads: 4             # Number of OpenMP threads (0 = auto)
+
+    # Logging
+    logging:
+      level: "info"            # debug, info, warn, error
+      save_statistics: true
+      statistics_file: "logs/orca_stats.log"
+      save_trajectories: true

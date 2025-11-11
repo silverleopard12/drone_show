@@ -1,5 +1,5 @@
 # Usage
-## 1. Required Libraries 
+## 1. Required Libraries
 * vtk (A dependency library for PCL installation, need to check Qt during compilation)
 * PCL
 
@@ -26,21 +26,21 @@ If the output shows rmw_cyclonedds_cpp, the modification is successful.
 ## 3. Running the Code
 ### 3.1 Launch Rviz
 ```
-ros2 launch ego_planner rviz.launch.py 
+ros2 launch ego_planner rviz.launch.py
 ```
 ### 3.2 Run the planning program
 Open a new terminal and execute:
 * Single drone
 ```
-ros2 launch ego_planner single_run_in_sim.launch.py 
+ros2 launch ego_planner single_run_in_sim.launch.py
 ```
 * swarm
 ```
-ros2 launch ego_planner swarm.launch.py 
+ros2 launch ego_planner swarm.launch.py
 ```
 * large swarm
 ```
-ros2 launch ego_planner swarm_large.launch.py  
+ros2 launch ego_planner swarm_large.launch.py
 ```
 * Additional parameters (optional):
     * use_mockamap:Map generation method. Default: False (uses Random Forest), True uses mockamap.

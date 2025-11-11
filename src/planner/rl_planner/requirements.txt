@@ -1,0 +1,26 @@
+# RL Planner Dependencies
+
+# Core RL
+torch>=2.0.0
+numpy>=1.24.0
+gymnasium>=0.29.0
+
+# Stable Baselines3 (for single-agent baseline)
+stable-baselines3[extra]>=2.2.0
+sb3-contrib>=2.2.0
+
+# Tensorboard for logging
+tensorboard>=2.15.0
+
+# Optional: Graph Neural Networks
+torch-geometric>=2.4.0
+torch-scatter>=2.1.0
+torch-sparse>=0.6.0
+
+# Utils
+matplotlib>=3.7.0
+tqdm>=4.65.0
+pyyaml>=6.0
+
+# For distributed training (optional)
+# ray[rllib]>=2.9.0

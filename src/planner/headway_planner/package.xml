@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>headway_planner</name>
+  <version>1.0.0</version>
+  <description>Headway and Altitude Slotting planner for drone shows - Time-shift based collision avoidance with minimal altitude separation</description>
+  <maintainer email="ds70768@naver.com">pjh</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Core ROS2 dependencies -->
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>visualization_msgs</depend>
+
+  <!-- Math and utilities -->
+  <depend>eigen3</depend>
+
+  <!-- JSON parsing (optional, for PX4 .plan) -->
+  <!-- <depend>nlohmann_json</depend> -->
+
+  <!-- Existing planner dependencies -->
+  <depend>traj_utils</depend>
+  <depend>quadrotor_msgs</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
