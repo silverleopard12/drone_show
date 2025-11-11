@@ -65,9 +65,10 @@ RUN apt-get update && apt-get install -y \
     ros-humble-rviz2 \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Eigen
+# Install Eigen and nlohmann-json
 RUN apt-get update && apt-get install -y \
     libeigen3-dev \
+    nlohmann-json3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Set up RMW implementation to use Cyclone DDS
