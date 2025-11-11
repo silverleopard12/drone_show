@@ -1,0 +1,22 @@
+# Build artifacts
+build/
+install/
+log/
+
+# IDE files
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+!Readme.md
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
