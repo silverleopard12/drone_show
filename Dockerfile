@@ -77,21 +77,32 @@ ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 # Create workspace directory
 WORKDIR /workspace
 
-# Source ROS2 setup in bashrc
+# Create entrypoint script to source ROS2 setup
+RUN echo '#!/bin/bash\n\
+set -e\n\
+\n\
+# Source ROS2 setup\n\
+source /opt/ros/${ROS_DISTRO}/setup.bash\n\
+\n\
+# Source workspace setup if it exists\n\
+if [ -f "/workspace/ego-planner-swarm/install/setup.bash" ]; then\n\
+    source /workspace/ego-planner-swarm/install/setup.bash\n\
+fi\n\
+\n\
+# Execute the command\n\
+exec "$@"' > /ros_entrypoint.sh \
+    && chmod +x /ros_entrypoint.sh
+
+# Source ROS2 setup in bashrc for interactive shells
 RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> /root/.bashrc \
-    && echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> /root/.bashrc
+    && echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> /root/.bashrc \
+    && echo 'if [ -f "/workspace/ego-planner-swarm/install/setup.bash" ]; then source /workspace/ego-planner-swarm/install/setup.bash; fi' >> /root/.bashrc
 
-# Source ROS2 setup for this shell session
-SHELL ["/bin/bash", "-c"]
+# Set up RMW implementation to use Cyclone DDS (keep this as ENV for all processes)
+ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
-# Set up environment variables for ROS2
-ENV AMENT_PREFIX_PATH=/opt/ros/humble
-ENV COLCON_PREFIX_PATH=/opt/ros/humble
-ENV LD_LIBRARY_PATH=/opt/ros/humble/lib
-ENV PATH=/opt/ros/humble/bin:$PATH
-ENV PYTHONPATH=/opt/ros/humble/lib/python3.10/site-packages
-ENV ROS_DISTRO=humble
-ENV ROS_VERSION=2
+# Set entrypoint
+ENTRYPOINT ["/ros_entrypoint.sh"]
 
-# Set default command with bash login shell to source .bashrc
+# Set default command
 CMD ["/bin/bash"]
