@@ -20,6 +20,7 @@ def generate_launch_description():
     drone_id = LaunchConfiguration('drone_id', default=0)
     odom_topic = LaunchConfiguration('odom_topic', default='visual_slam/odom')
     obj_num = LaunchConfiguration('obj_num', default=10)
+    planning_horizon = LaunchConfiguration('planning_horizon', default=7.5)
 
     # DeclareLaunchArgument definitions
     map_size_x_cmd = DeclareLaunchArgument('map_size_x', default_value=map_size_x, description='Map size along x')
@@ -34,6 +35,7 @@ def generate_launch_description():
     drone_id_cmd = DeclareLaunchArgument('drone_id', default_value=drone_id, description='ID of the drone')
     odom_topic_cmd = DeclareLaunchArgument('odom_topic', default_value=odom_topic, description='Odometry topic')
     obj_num_cmd = DeclareLaunchArgument('obj_num', default_value=obj_num, description='Number of moving objects')
+    planning_horizon_cmd = DeclareLaunchArgument('planning_horizon', default_value=planning_horizon, description='Planning horizon distance in meters')
 
     use_dynamic = LaunchConfiguration('use_dynamic', default=True)
     use_dynamic_cmd = DeclareLaunchArgument('use_dynamic', default_value=use_dynamic, description='Use Drone Simulation Considering Dynamics or Not')
@@ -64,7 +66,7 @@ def generate_launch_description():
             'fy': str(387.229248046875),
             'max_vel': str(2.0),
             'max_acc': str(3.0),
-            'planning_horizon': str(7.5),
+            'planning_horizon': planning_horizon,
             'use_distinctive_trajs': 'False',
             'flight_type': str(2),
             'point_num': str(1),
@@ -162,6 +164,7 @@ def generate_launch_description():
     ld.add_action(drone_id_cmd)
     ld.add_action(odom_topic_cmd)
     ld.add_action(obj_num_cmd)
+    ld.add_action(planning_horizon_cmd)
     ld.add_action(use_dynamic_cmd)
     ld.add_action(use_pcl_render_cmd)
     ld.add_action(use_odom_vis_cmd)

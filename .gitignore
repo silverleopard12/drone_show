@@ -2,8 +2,24 @@
 .catkin_workspace
 build/
 devel/
+install/
+log/
 files/
 src/CMakeLists.txt
 benchmark_haha.zip
 rebound_planner_BB.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
 

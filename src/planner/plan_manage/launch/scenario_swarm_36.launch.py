@@ -10,7 +10,7 @@ from launch.conditions import IfCondition, UnlessCondition
 
 
 def generate_launch_description():
-    # Map parameters - increased for expanded 36-drone formation (Y: 5~46, Z: 10~35)
+    # Map parameters - increased for expanded 36-drone formation (Y: 5~56, Z: 10~35)
     map_size_x = LaunchConfiguration('map_size_x', default = 10.0)
     map_size_y = LaunchConfiguration('map_size_y', default = 100.0)
     map_size_z = LaunchConfiguration('map_size_z', default = 50.0)
@@ -94,45 +94,46 @@ def generate_launch_description():
     # scenario_publisher_node = ExecuteProcess(...)
 
     # Drone configurations - 36 drones
-    # Init: 6x6 Grid formation (FORMATION_36_A) - Y spacing 8.0m, Z spacing 5.0m for better collision avoidance
-    # Target: Triangle formation (FORMATION_36_B) with Fair Hungarian Allocation (3.2m spacing)
+    # Init: 6x6 Grid formation (FORMATION_36_A) - Y: 5~45m, Z: 10~35m
+    # Target: Triangle formation (FORMATION_36_B) - Y: 24~56m (shifted +10m), Z: 10~26m
+    # Fair Hungarian Assignment - Avg: 16.18m, Max: 25.93m, Min: 1.53m
     drone_configs = [
-        {'drone_id': 0, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 20.5, 'target_z': 19.7},
-        {'drone_id': 1, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 26.9, 'target_z': 19.7},
-        {'drone_id': 2, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 30.1, 'target_z': 13.3},
-        {'drone_id': 3, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 30.1, 'target_z': 10.1},
-        {'drone_id': 4, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 33.3, 'target_z': 13.3},
-        {'drone_id': 5, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 36.5, 'target_z': 16.5},
-        {'drone_id': 6, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 23.7, 'target_z': 16.5},
-        {'drone_id': 7, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 26.9, 'target_z': 13.3},
-        {'drone_id': 8, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 33.3, 'target_z': 19.7},
-        {'drone_id': 9, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 30.1, 'target_z': 16.5},
-        {'drone_id': 10, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 33.3, 'target_z': 16.5},
-        {'drone_id': 11, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 39.7, 'target_z': 19.7},
-        {'drone_id': 12, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 20.5, 'target_z': 22.9},
-        {'drone_id': 13, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 26.9, 'target_z': 16.5},
-        {'drone_id': 14, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 23.7, 'target_z': 19.7},
-        {'drone_id': 15, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 30.1, 'target_z': 19.7},
-        {'drone_id': 16, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 36.5, 'target_z': 19.7},
-        {'drone_id': 17, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 39.7, 'target_z': 22.9},
-        {'drone_id': 18, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 17.3, 'target_z': 22.9},
-        {'drone_id': 19, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 23.7, 'target_z': 22.9},
-        {'drone_id': 20, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 26.9, 'target_z': 22.9},
-        {'drone_id': 21, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 30.1, 'target_z': 22.9},
-        {'drone_id': 22, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 36.5, 'target_z': 22.9},
-        {'drone_id': 23, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 42.9, 'target_z': 22.9},
-        {'drone_id': 24, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 14.1, 'target_z': 26.1},
-        {'drone_id': 25, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 20.5, 'target_z': 26.1},
-        {'drone_id': 26, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 26.9, 'target_z': 26.1},
-        {'drone_id': 27, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 33.3, 'target_z': 22.9},
-        {'drone_id': 28, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 36.5, 'target_z': 26.1},
-        {'drone_id': 29, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 46.1, 'target_z': 26.1},
-        {'drone_id': 30, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 17.3, 'target_z': 26.1},
-        {'drone_id': 31, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 23.7, 'target_z': 26.1},
-        {'drone_id': 32, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 30.1, 'target_z': 26.1},
-        {'drone_id': 33, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 33.3, 'target_z': 26.1},
-        {'drone_id': 34, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 39.7, 'target_z': 26.1},
-        {'drone_id': 35, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 42.9, 'target_z': 26.1},
+        {'drone_id': 0, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 27.3, 'target_z': 22.9},  # Distance: 25.76m
+        {'drone_id': 1, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 36.9, 'target_z': 13.3},  # Distance: 24.13m
+        {'drone_id': 2, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 40.1, 'target_z': 16.5},  # Distance: 20.18m
+        {'drone_id': 3, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 43.3, 'target_z': 13.3},  # Distance: 14.68m
+        {'drone_id': 4, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 40.1, 'target_z': 13.3},  # Distance: 4.53m
+        {'drone_id': 5, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 10.0, 'target_x': 3.0, 'target_y': 49.7, 'target_z': 19.7},  # Distance: 10.78m
+        {'drone_id': 6, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 30.5, 'target_z': 19.7},  # Distance: 25.93m
+        {'drone_id': 7, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 36.9, 'target_z': 19.7},  # Distance: 24.36m
+        {'drone_id': 8, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 43.3, 'target_z': 19.7},  # Distance: 22.79m
+        {'drone_id': 9, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 40.1, 'target_z': 10.1},  # Distance: 12.13m
+        {'drone_id': 10, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 43.3, 'target_z': 16.5},  # Distance: 6.48m
+        {'drone_id': 11, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 15.0, 'target_x': 3.0, 'target_y': 46.5, 'target_z': 16.5},  # Distance: 2.12m
+        {'drone_id': 12, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 30.5, 'target_z': 22.9},  # Distance: 25.66m
+        {'drone_id': 13, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 36.9, 'target_z': 22.9},  # Distance: 24.08m
+        {'drone_id': 14, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 36.9, 'target_z': 16.5},  # Distance: 16.28m
+        {'drone_id': 15, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 33.7, 'target_z': 19.7},  # Distance: 4.71m
+        {'drone_id': 16, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 40.1, 'target_z': 19.7},  # Distance: 3.11m
+        {'drone_id': 17, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 20.0, 'target_x': 3.0, 'target_y': 46.5, 'target_z': 19.7},  # Distance: 1.53m
+        {'drone_id': 18, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 27.3, 'target_z': 26.1},  # Distance: 22.33m
+        {'drone_id': 19, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 33.7, 'target_z': 22.9},  # Distance: 20.81m
+        {'drone_id': 20, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 40.1, 'target_z': 22.9},  # Distance: 19.22m
+        {'drone_id': 21, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 43.3, 'target_z': 22.9},  # Distance: 14.45m
+        {'drone_id': 22, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 46.5, 'target_z': 22.9},  # Distance: 9.73m
+        {'drone_id': 23, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 25.0, 'target_x': 3.0, 'target_y': 49.7, 'target_z': 22.9},  # Distance: 5.15m
+        {'drone_id': 24, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 30.5, 'target_z': 26.1},  # Distance: 25.80m
+        {'drone_id': 25, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 33.7, 'target_z': 16.5},  # Distance: 24.71m
+        {'drone_id': 26, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 33.7, 'target_z': 26.1},  # Distance: 13.29m
+        {'drone_id': 27, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 40.1, 'target_z': 26.1},  # Distance: 11.77m
+        {'drone_id': 28, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 52.9, 'target_z': 22.9},  # Distance: 17.41m
+        {'drone_id': 29, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 30.0, 'target_x': 3.0, 'target_y': 52.9, 'target_z': 26.1},  # Distance: 8.81m
+        {'drone_id': 30, 'init_x': 3.0, 'init_y': 5.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 24.1, 'target_z': 26.1},  # Distance: 21.07m
+        {'drone_id': 31, 'init_x': 3.0, 'init_y': 13.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 36.9, 'target_z': 26.1},  # Distance: 25.50m
+        {'drone_id': 32, 'init_x': 3.0, 'init_y': 21.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 43.3, 'target_z': 26.1},  # Distance: 24.01m
+        {'drone_id': 33, 'init_x': 3.0, 'init_y': 29.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 46.5, 'target_z': 26.1},  # Distance: 19.63m
+        {'drone_id': 34, 'init_x': 3.0, 'init_y': 37.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 49.7, 'target_z': 26.1},  # Distance: 15.51m
+        {'drone_id': 35, 'init_x': 3.0, 'init_y': 45.0, 'init_z': 35.0, 'target_x': 3.0, 'target_y': 56.1, 'target_z': 26.1},  # Distance: 14.23m
     ]
 
     drone_nodes = []
@@ -152,7 +153,8 @@ def generate_launch_description():
                 'map_size_x': map_size_x,
                 'map_size_y': map_size_y,
                 'map_size_z': map_size_z,
-                'odom_topic': odom_topic
+                'odom_topic': odom_topic,
+                'planning_horizon': '15.0'  # Increased from 7.5 to 15.0 for better pathfinding in dense swarms
                 # Using minimal launch file - no visualization, no dynamics
             }.items()
         )
