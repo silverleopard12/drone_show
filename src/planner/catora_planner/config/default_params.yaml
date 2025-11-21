@@ -1,0 +1,8 @@
+/**:
+  ros__parameters:
+    # Kinematic constraints
+    max_velocity: 2.0        # m/s
+    max_acceleration: 2.0    # m/s^2
+
+    # Trajectory parameters
+    trajectory_dt: 0.2       # seconds

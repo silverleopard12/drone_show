@@ -1,0 +1,8 @@
+# Request: Initial and goal configurations
+geometry_msgs/Point[] initial_configurations
+geometry_msgs/Point[] goal_configurations
+---
+# Response: Assignment mapping
+int32[] mapping  # mapping[i] = j means robot i goes to goal j
+bool success
+string message

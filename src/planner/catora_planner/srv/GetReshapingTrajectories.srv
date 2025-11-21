@@ -1,0 +1,11 @@
+# Request: Initial and goal configurations with kinematic constraints
+geometry_msgs/Point[] initial_configurations
+geometry_msgs/Point[] goal_configurations
+float32 trajectory_dt
+float32 max_velocity
+float32 max_acceleration
+---
+# Response: Trajectories for each robot
+catora_planner/Trajectory[] trajectories  # trajectories[i] = trajectory for robot i
+bool success
+string message
