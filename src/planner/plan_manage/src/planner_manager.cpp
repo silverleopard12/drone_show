@@ -54,12 +54,14 @@ namespace ego_planner
     static int count = 0;
     printf("\033[47;30m\n[drone %d replan %d]==============================================\033[0m\n", pp_.drone_id, count++);
 
-    if ((start_pt - local_target_pt).norm() < 0.2)
-    {
-      cout << "Close to goal" << endl;
-      continous_failures_count_++;
-      return false;
-    }
+    // Removed "Close to goal" check - allow replanning even when very close to target
+    // This prevents infinite replan loops when arrival_threshold (0.5m) > close_to_goal_threshold (0.2m)
+    // if ((start_pt - local_target_pt).norm() < 0.2)
+    // {
+    //   cout << "Close to goal" << endl;
+    //   continous_failures_count_++;
+    //   return false;
+    // }
 
     bspline_optimizer_->setLocalTargetPt(local_target_pt);
 

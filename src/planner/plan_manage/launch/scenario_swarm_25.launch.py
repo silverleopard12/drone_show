@@ -81,6 +81,13 @@ def generate_launch_description():
         condition = IfCondition(use_mockamap)
     )
 
+    # Layer separation configuration for 25 drones
+    # 25 drones = 5 layers (5 drones per layer)
+    # Symmetric distribution: -1.0m, -0.5m, 0.0m, +0.5m, +1.0m
+    LAYER_COUNT_25 = 5
+    LAYER_OFFSET_25 = 0.5  # meters vertical separation per layer
+    LAYER_CENTER_OFFSET_25 = -1.0  # Start offset to center the layers symmetrically
+
     # Drone configurations - 25 drones
     # Init: 5x5 Grid formation (FORMATION_25_A) - Y: 8~24m, Z: 10~26m
     # Target: Triangle formation (FORMATION_25_B) - Y: 14~40m, Z: 10~23m
@@ -123,7 +130,7 @@ def generate_launch_description():
                 'drone_id': str(config['drone_id']),
                 'init_x': str(config['init_x']),
                 'init_y': str(config['init_y']),
-                'init_z': str(config['init_z']),
+                'init_z': str(config['init_z'] + LAYER_CENTER_OFFSET_25 + (config['drone_id'] % LAYER_COUNT_25) * LAYER_OFFSET_25),  # Symmetric layer separation
                 'target_x': str(config['target_x']),
                 'target_y': str(config['target_y']),
                 'target_z': str(config['target_z']),
@@ -165,6 +172,20 @@ def generate_launch_description():
         output='screen'
     )
 
+    # Trajectory Recorder - automatically records all drone trajectories
+    trajectory_recorder_node = Node(
+        package='traj_recorder',
+        executable='traj_recorder_node',
+        name='trajectory_recorder',
+        output='screen',
+        parameters=[{
+            'num_drones': 25,
+            'output_folder': 'trajectories_25_drones',
+            'sampling_dt': 0.02,  # 50Hz sampling
+            'default_rgb': [255, 255, 255],
+        }]
+    )
+
     ld = LaunchDescription()
 
     # Add arguments
@@ -182,6 +203,9 @@ def generate_launch_description():
     # Add swarm synchronizer (will exit after trigger) and mission timer
     ld.add_action(swarm_synchronizer)
     ld.add_action(mission_timer)
+
+    # Add trajectory recorder
+    ld.add_action(trajectory_recorder_node)
 
     # Add drone nodes
     for drone in drone_nodes:

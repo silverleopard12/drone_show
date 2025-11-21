@@ -115,10 +115,10 @@ def generate_launch_description():
         ],
         parameters=[
             {'fsm/flight_type': flight_type},
-            {'fsm/thresh_replan_time': 1.0},
+            {'fsm/thresh_replan_time': 99999.0},  # Disable replanning - full path planning
             {'fsm/thresh_no_replan_meter': 1.0},
             {'fsm/planning_horizon': planning_horizon},
-            {'fsm/planning_horizen_time': 2.5},
+            {'fsm/planning_horizen_time': 99999.0},  # Plan for entire trajectory duration
             {'fsm/emergency_time': 1.0},
             {'fsm/realworld_experiment': False},
             {'fsm/fail_safe': True},

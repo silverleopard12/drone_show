@@ -1,3 +1,27 @@
+# Ego-Planner Swarm
+
+ROS2 Humble implementation of ego-planner for multi-drone swarm coordination with multiple planning algorithms.
+
+## Documentation
+
+### Main Documentation
+- **README.md** - This file (quick start guide)
+- **TODO.md** - Project TODO list and status
+- **KEY_FILES_REFERENCE.md** - Key files reference for collision avoidance
+
+### CAT-ORA Integration
+- **CATORA_INTEGRATION_SUMMARY.md** - Complete CAT-ORA integration summary
+- **CATORA_PLANNER_GUIDE.md** - CAT-ORA planner usage guide
+
+### Archived Documentation
+See `docs/archived/` for historical documentation:
+- CLEANUP_PLAN.md
+- OFFLINE_TRAJECTORY_PLANNING.md
+- TRAJECTORY_SAMPLING.md
+- QUICK_SAMPLING_GUIDE.md
+
+---
+
 # Usage
 
 ## Quick Start with Docker (Recommended)

@@ -10,49 +10,83 @@
 
 namespace fs = std::filesystem;
 
-// Simple B-spline evaluator (uniform cubic B-spline)
+// B-spline evaluator using de Boor's algorithm
 class SimpleBsplineEvaluator {
 public:
     SimpleBsplineEvaluator(const std::vector<Eigen::Vector3d>& ctrl_pts,
                           const std::vector<double>& knots, int order)
-        : control_points_(ctrl_pts), knots_(knots), order_(order) {}
+        : control_points_(ctrl_pts), knots_(knots), p_(order),
+          n_(ctrl_pts.size() - 1), m_(knots.size() - 1) {}
+
+    Eigen::Vector3d evaluateDeBoor(double u) {
+        // Clamp u to valid range
+        double u_min = knots_[p_];
+        double u_max = knots_[m_ - p_];
+        double ub = std::min(std::max(u_min, u), u_max);
+
+        // Find knot span k such that u is in [u_k, u_{k+1})
+        int k = p_;
+        while (k < m_ - p_) {
+            if (knots_[k + 1] >= ub)
+                break;
+            ++k;
+        }
+
+        // de Boor's algorithm
+        std::vector<Eigen::Vector3d> d;
+        for (int i = 0; i <= p_; ++i) {
+            int idx = k - p_ + i;
+            if (idx >= 0 && idx < static_cast<int>(control_points_.size())) {
+                d.push_back(control_points_[idx]);
+            } else {
+                d.push_back(Eigen::Vector3d::Zero());
+            }
+        }
+
+        // Recursive computation
+        for (int r = 1; r <= p_; ++r) {
+            for (int i = p_; i >= r; --i) {
+                int idx_alpha = i + k - p_;
+
+                double denominator = knots_[idx_alpha + 1 + p_ - r] - knots_[idx_alpha];
+                double alpha = 0.0;
+                if (std::abs(denominator) > 1e-10) {
+                    alpha = (ub - knots_[idx_alpha]) / denominator;
+                }
+
+                d[i] = (1.0 - alpha) * d[i - 1] + alpha * d[i];
+            }
+        }
+
+        return d[p_];
+    }
 
     Eigen::Vector3d evaluate(double t) {
-        // For simplicity, use linear interpolation between control points
-        // A full de Boor algorithm implementation would be more accurate
-        int n = control_points_.size();
-        if (n == 0) return Eigen::Vector3d::Zero();
-        if (n == 1) return control_points_[0];
-
-        // Normalize t to [0, 1]
-        double duration = knots_.back() - knots_[order_];
-        if (duration <= 0) return control_points_[0];
-
-        double u = std::min(std::max(t / duration, 0.0), 1.0);
-        double idx = u * (n - 1);
-
-        int i0 = static_cast<int>(std::floor(idx));
-        int i1 = std::min(i0 + 1, n - 1);
-        double alpha = idx - i0;
-
-        return (1.0 - alpha) * control_points_[i0] + alpha * control_points_[i1];
+        // Convert time t to parameter u (matches evaluateDeBoorT in C++)
+        double u = t + knots_[p_];
+        return evaluateDeBoor(u);
     }
 
     double getDuration() {
-        if (knots_.size() <= static_cast<size_t>(order_)) return 0.0;
-        return knots_.back() - knots_[order_];
+        if (knots_.size() <= static_cast<size_t>(p_)) return 0.0;
+        return knots_[m_ - p_] - knots_[p_];
     }
 
 private:
     std::vector<Eigen::Vector3d> control_points_;
     std::vector<double> knots_;
-    int order_;
+    int p_;  // degree (order)
+    int n_;  // number of control points - 1
+    int m_;  // number of knots - 1
 };
 
 // Per-drone file handler
 struct DroneFileHandler {
     std::ofstream file_stream;
     int line_number = 1;
+    double last_timestamp = 0.0;
+    Eigen::Vector3d last_position = Eigen::Vector3d::Zero();
+    std::string filename;
 
     DroneFileHandler() = default;
     DroneFileHandler(DroneFileHandler&&) = default;
@@ -92,11 +126,12 @@ public:
 
         global_start_time_ = this->now();
 
-        // Subscribe to all drones
-        for (int drone_id = 1; drone_id <= num_drones_; ++drone_id) {
-            // Create file for this drone
-            std::string filename = output_folder_ + "/node_" + std::to_string(drone_id) + ".txt";
+        // Subscribe to all drones (0-indexed)
+        for (int drone_id = 0; drone_id < num_drones_; ++drone_id) {
+            // Create file for this drone (node_1.txt instead of node_0.txt)
+            std::string filename = output_folder_ + "/node_" + std::to_string(drone_id + 1) + ".txt";
             DroneFileHandler handler;
+            handler.filename = filename;
             handler.file_stream.open(filename);
 
             if (!handler.file_stream.is_open()) {
@@ -128,13 +163,26 @@ public:
 
     ~MultiDroneTrajectoryRecorder() {
         RCLCPP_INFO(this->get_logger(), "Saving trajectories...");
+
+        // First, close all files and find max line count
+        int max_lines = 0;
         for (auto& [drone_id, handler] : drone_files_) {
             if (handler.file_stream.is_open()) {
                 handler.file_stream.close();
-                RCLCPP_INFO(this->get_logger(), "  Drone %d: %d lines saved",
+                max_lines = std::max(max_lines, handler.line_number - 1);
+                RCLCPP_INFO(this->get_logger(), "  Drone %d: %d lines",
                            drone_id, handler.line_number - 1);
             }
         }
+
+        RCLCPP_INFO(this->get_logger(), "Max lines: %d", max_lines);
+
+        // Pad all files to max length with hovering
+        if (max_lines > 0) {
+            RCLCPP_INFO(this->get_logger(), "Padding all trajectories to %d lines...", max_lines);
+            padAllTrajectories(max_lines);
+        }
+
         RCLCPP_INFO(this->get_logger(), "All trajectories saved to: %s", output_folder_.c_str());
     }
 
@@ -207,12 +255,17 @@ private:
             Eigen::Vector3d pos = bspline.evaluate(t);
             double timestamp = msg_offset + t;
             writeTrajectoryPoint(handler, drone_id, timestamp, pos.x(), pos.y(), pos.z(), 0.0);
+            handler.last_timestamp = timestamp;
+            handler.last_position = pos;
         }
 
         // Always write the final point
         Eigen::Vector3d final_pos = bspline.evaluate(duration);
-        writeTrajectoryPoint(handler, drone_id, msg_offset + duration,
+        double final_timestamp = msg_offset + duration;
+        writeTrajectoryPoint(handler, drone_id, final_timestamp,
                            final_pos.x(), final_pos.y(), final_pos.z(), 0.0);
+        handler.last_timestamp = final_timestamp;
+        handler.last_position = final_pos;
 
         handler.file_stream.flush();
     }
@@ -233,6 +286,53 @@ private:
                            << default_rgb_[0] << ","
                            << default_rgb_[1] << ","
                            << default_rgb_[2] << "\n";
+    }
+
+    void padAllTrajectories(int max_lines) {
+        for (auto& [drone_id, handler] : drone_files_) {
+            int current_lines = handler.line_number - 1;
+
+            if (current_lines >= max_lines) {
+                RCLCPP_INFO(this->get_logger(), "  Drone %d: already at max length", drone_id);
+                continue;
+            }
+
+            int lines_to_add = max_lines - current_lines;
+
+            // Reopen file in append mode
+            std::ofstream file(handler.filename, std::ios::app);
+            if (!file.is_open()) {
+                RCLCPP_ERROR(this->get_logger(), "  Drone %d: failed to reopen file for padding", drone_id);
+                continue;
+            }
+
+            // Pad with hovering at last position
+            double current_timestamp = handler.last_timestamp;
+            int current_line_num = current_lines;
+
+            for (int i = 0; i < lines_to_add; ++i) {
+                current_line_num++;
+                current_timestamp += sampling_dt_;
+
+                // Format: line_number, drone_id, timestamp, move, x, y, z, yaw, r, g, b
+                file << current_line_num << ","
+                     << drone_id << ","
+                     << std::fixed << std::setprecision(2) << current_timestamp << ","
+                     << "move,"
+                     << std::setprecision(2) << handler.last_position.x() << ","
+                     << std::setprecision(2) << handler.last_position.y() << ","
+                     << std::setprecision(1) << handler.last_position.z() << ","
+                     << std::setprecision(1) << 0.0 << ","
+                     << default_rgb_[0] << ","
+                     << default_rgb_[1] << ","
+                     << default_rgb_[2] << "\n";
+            }
+
+            file.close();
+            RCLCPP_INFO(this->get_logger(), "  Drone %d: padded %d lines (hover at %.2f, %.2f, %.1f)",
+                       drone_id, lines_to_add,
+                       handler.last_position.x(), handler.last_position.y(), handler.last_position.z());
+        }
     }
 
     std::map<int, rclcpp::Subscription<traj_utils::msg::Bspline>::SharedPtr> subscriptions_;

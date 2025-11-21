@@ -17,6 +17,7 @@ namespace ego_planner
     // Initialize mission timing
     mission_started_ = false;
     goal_reached_ = false;
+    planning_ready_published_ = false;
 
     node_->declare_parameter("fsm/flight_type", -1);
     node_->declare_parameter("fsm/thresh_replan_time", -1.0);
@@ -115,6 +116,9 @@ namespace ego_planner
 
     bspline_pub_ = node_->create_publisher<traj_utils::msg::Bspline>("planning/bspline", 10);
     data_disp_pub_ = node_->create_publisher<traj_utils::msg::DataDisp>("planning/data_display", 100);
+
+    // Publisher for planning ready status
+    planning_ready_pub_ = node_->create_publisher<std_msgs::msg::Bool>("planning/ready", 10);
 
     if (target_type_ == TARGET_TYPE::MANUAL_TARGET)
     {
@@ -557,6 +561,16 @@ namespace ego_planner
         changeFSMExecState(EXEC_TRAJ, "FSM");
         flag_escape_emergency_ = true;
         publishSwarmTrajs(false);
+
+        // Publish planning ready status (only once)
+        if (!planning_ready_published_)
+        {
+          std_msgs::msg::Bool ready_msg;
+          ready_msg.data = true;
+          planning_ready_pub_->publish(ready_msg);
+          planning_ready_published_ = true;
+          RCLCPP_INFO(node_->get_logger(), "✓ Initial trajectory planning complete - ready signal published");
+        }
       }
       else
       {

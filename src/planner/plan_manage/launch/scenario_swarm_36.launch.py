@@ -154,19 +154,19 @@ def generate_launch_description():
                 'map_size_y': map_size_y,
                 'map_size_z': map_size_z,
                 'odom_topic': odom_topic,
-                'planning_horizon': '15.0'  # Increased from 7.5 to 15.0 for better pathfinding in dense swarms
+                'planning_horizon': '70.0'  # Optimized for 36-drone swarm (94% success rate)
                 # Using minimal launch file - no visualization, no dynamics
             }.items()
         )
         drone_nodes.append(drone_launch)
 
-    # Swarm Synchronizer - waits for all drones to spawn, then triggers start
+    # Swarm Synchronizer - waits for all drones to complete planning, then triggers start
     project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
         get_package_share_directory('ego_planner')))))
-    swarm_sync_script = os.path.join(project_root, 'scripts', 'swarm_synchronizer.py')
+    swarm_sync_script = os.path.join(project_root, 'scripts', 'swarm_synchronizer_with_planning.py')
 
     swarm_synchronizer = ExecuteProcess(
-        cmd=['python3', swarm_sync_script, '--ros-args', '-p', 'num_drones:=36', '-p', 'wait_time:=5.0'],
+        cmd=['python3', swarm_sync_script, '--ros-args', '-p', 'num_drones:=36', '-p', 'timeout:=180.0'],
         output='screen'
     )
 

@@ -39,12 +39,12 @@ def generate_launch_description():
     min_dist_arg = DeclareLaunchArgument('min_dist', default_value=min_dist, description='Minimum distance')
     odometry_topic_arg = DeclareLaunchArgument('odometry_topic', default_value=odometry_topic, description='Odometry topic')
     drone_id_arg = DeclareLaunchArgument('drone_id', default_value=drone_id, description='Drone ID')
-    
+
     # 地图属性以及是否使用动力学仿真
-    use_mockamap = LaunchConfiguration('use_mockamap', default=False) # map_generator or mockamap 
-    
+    use_mockamap = LaunchConfiguration('use_mockamap', default=False) # map_generator or mockamap
+
     use_mockamap_arg = DeclareLaunchArgument('use_mockamap', default_value=use_mockamap, description='Choose map type, map_generator or mockamap')
-    
+
     use_dynamic = LaunchConfiguration('use_dynamic', default=True)
     use_dynamic_arg = DeclareLaunchArgument('use_dynamic', default_value=use_dynamic, description='Use Drone Simulation Considering Dynamics or Not')
 
@@ -110,23 +110,23 @@ def generate_launch_description():
         ],
         condition = IfCondition(use_mockamap)
     )
-    
+
     # dynamic
     so3_quadrotor_simulator = launch_ros.actions.Node(
         package='so3_quadrotor_simulator', executable='so3_quadrotor_simulator',
-        output='screen', name=['drone_', drone_id, '_quadrotor_simulator_so3'], 
+        output='screen', name=['drone_', drone_id, '_quadrotor_simulator_so3'],
         parameters=[{'rate/odom': 100.0},
                     {'simulator/init_state_x': init_x},
                     {'simulator/init_state_y': init_y},
                     {'simulator/init_state_z': init_z}],
-        
+
         remappings=[('odom', ['drone_', drone_id, '_visual_slam/odom']),
                     ('cmd', ['drone_', drone_id, '_so3_cmd']),
                     ('force_disturbance', ['drone_', drone_id,'_force_disturbance']),
                     ('moment_disturbance', ['drone_', drone_id,'_moment_disturbance'])],
         condition = IfCondition(use_dynamic)
-        ) 
-    
+        )
+
     gains_file = os.path.join(
         get_package_share_directory('so3_control'),
         'config',
@@ -137,9 +137,9 @@ def generate_launch_description():
         'config',
         'corrections_hummingbird.yaml'
     )
-    
+
     so3_control_component = launch_ros.descriptions.ComposableNode(
-            package='so3_control', 
+            package='so3_control',
             plugin='SO3ControlComponent',
             name=['drone_', drone_id, '_so3_control_component'],
             parameters=[
@@ -161,7 +161,7 @@ def generate_launch_description():
                         ('so3_cmd', ['drone_', drone_id, '_so3_cmd'])],
             condition = IfCondition(use_dynamic)
             )
-    
+
     so3_control_container = ComposableNodeContainer(
             name=['drone_', drone_id, '_so3_control_container'],
             namespace='',
@@ -221,11 +221,11 @@ def generate_launch_description():
         ],
         condition = IfCondition(use_odom_vis)
     )
-    
-    camera_file = os.path.join( 
-        get_package_share_directory('local_sensing'), 
-        'config', 
-        'camera.yaml' 
+
+    camera_file = os.path.join(
+        get_package_share_directory('local_sensing'),
+        'config',
+        'camera.yaml'
     )
 
     pcl_render_node = Node(
@@ -267,7 +267,7 @@ def generate_launch_description():
     ld.add_action(min_dist_arg)
     ld.add_action(odometry_topic_arg)
     ld.add_action(drone_id_arg)
-    
+
     ld.add_action(use_mockamap_arg)
     ld.add_action(use_dynamic_arg)
     ld.add_action(use_pcl_render_arg)
@@ -279,7 +279,7 @@ def generate_launch_description():
     ld.add_action(so3_quadrotor_simulator)
     ld.add_action(so3_control_container)
     ld.add_action(poscmd_2_odom_node)
-    
+
     ld.add_action(odom_visualization_node)
     ld.add_action(pcl_render_node)
 
